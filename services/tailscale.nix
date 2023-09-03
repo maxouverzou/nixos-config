@@ -2,9 +2,9 @@
 {
   environment.systemPackages = with pkgs; [
     tailscale-systray
-    wl-clipboard
+    wl-clipboard # tailscale needs that
+
     trayscale
-    # tailscale
   ];
   services.tailscale.enable = true;
 }
