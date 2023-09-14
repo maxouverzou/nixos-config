@@ -5,12 +5,13 @@
   pkgs,
   ...
 }: let
-  marketplace-extensions = with inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace; [
-    ms-python.python
-    devicescript.devicescript-vscode
-    sanaajani.taskrunnercode
-  ];
+  inherit (lib.generators) toKeyValue;
 in {
+
+  imports =
+    [
+      ../../components/vscode.user.nix
+    ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -38,36 +39,25 @@ in {
 
   programs.bash = {
     enable = true;
+    /*
     initExtra = ''
-      [[ $- == *i* ]] && exec fish
+      if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''\${BASH_EXECUTION_STRING} ]]
+      then
+        shopt -q login_shell && LOGIN_OPTION="--login" || LOGIN_OPTION=""
+        exec fish $LOGIN_OPTION
+      fi
     '';
-  };
-
-  programs.vscode = {
-    enable = true;
-    enableUpdateCheck = false;
-    enableExtensionUpdateCheck = false;
-    userSettings = {
-      "files.autoSave" = "off";
-      "[nix]"."editor.tabSize" = 2;
-    };
-    extensions = with pkgs.vscode-extensions; [
-      bbenoist.nix
-      ms-python.vscode-pylance
-      arrterian.nix-env-selector
-    ] ++ marketplace-extensions;
-    mutableExtensionsDir = true;
+    */
   };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    qgis-ltr
-    openscad	
+    awscli2
+
     cantor
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    # pkgs.hello
+    openscad	
+    qgis-ltr
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -96,6 +86,8 @@ in {
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+
+    ".npmrc".text = toKeyValue { } { fund = false; update-notifier = false; };
   };
 
   # You can also manage environment variables but you will have to manually

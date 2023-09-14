@@ -3,14 +3,9 @@ let
   inherit (lib) mkDefault optional optionals;
 in
 rec {
-  # TODO: remove this
-  programs.wireshark = {
-    enable = true;
-    package = pkgs.wireshark;
-  };
-
-  users.extraUsers.maxou = {
+  users.extraUsers.milou = {
     isNormalUser = true;
+    
     extraGroups = [
       "wheel"
       "audio"
@@ -22,12 +17,12 @@ rec {
       ++ (optional config.virtualisation.libvirtd.enable "libvirtd")
       ++ (optional config.virtualisation.lxd.enable "lxd")
       ++ (optional config.virtualisation.virtualbox.host.enable "vboxusers") 
-      ++ (optional programs.wireshark.enable "wireshark")
+      # ++ (optional programs.wireshark.enable "wireshark")
       ++ (optional (config.hardware.hackrf.enable || config.hardware.rtl-sdr.enable) "plugdev")
     ;
   };
 
-  home-manager.users.maxou = {
+  home-manager.users.milou = {
     imports = [./home.nix];
   };
 }

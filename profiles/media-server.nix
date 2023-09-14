@@ -1,8 +1,8 @@
-{ config, pkgs, lib, ...}:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [
-      ../services/plex.nix
+      ../components/plex.system.nix
     ];
 }

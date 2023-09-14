@@ -1,33 +1,10 @@
-{ config, pkgs, lib, ... }:
-
-let
-  inherit (lib) mkDefault;
-in
-rec {
-  imports =
-    [
-      <home-manager/nixos>
-    ];
-
-  users.extraUsers.milou = {
-    isNormalUser = true;
-    # TODO: optional if docker.enable ++ docker
-    extraGroups = mkDefault [
-      "wheel"
-      "networkmanager"
-      "audio"
-      "video"
-      "docker"
-      "libvirtd"
-      "plugdev"
-      "adbusers"
-    ];
-  };
-
-  home-manager.useUserPackages = true;
-  home-manager.useGlobalPkgs = true;
-
-  home-manager.users.milou = { pkgs, ... }: {
+{
+  config,
+  inputs,
+  lib,
+  pkgs,
+  ...
+}: {
     #home.packages = with pkgs; [ httpie ];
 
     programs = {
@@ -54,5 +31,4 @@ rec {
     };
 
     home.stateVersion = "23.05";
-  };
 }

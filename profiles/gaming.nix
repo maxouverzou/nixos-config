@@ -1,4 +1,4 @@
-{config, lib, pkgs, ...}:
+{ config, lib, pkgs, ... }:
 
 {
   programs.steam = {
@@ -11,8 +11,9 @@
   hardware.bluetooth.package = pkgs.bluezFull;
 
   environment.systemPackages = with pkgs; [
-	  bottles
+    bottles
     discord
+    geekbench
   ];
 
 }

@@ -3,8 +3,12 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-23.05";
+    
     home-manager.url = "github:nix-community/home-manager/release-23.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
@@ -45,14 +49,6 @@
         modules = [
           ./machines/nuc-box-2-plus/default.nix
         ];
-      };
-    };
-
-    homeConfigurations = {
-      "maxou@kiosk" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./users/maxou/home.nix];
       };
     };
   };

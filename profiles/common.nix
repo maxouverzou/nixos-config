@@ -1,18 +1,18 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  outputs,
-  ...
+{ config
+, pkgs
+, lib
+, inputs
+, outputs
+, ...
 }: {
   imports =
     [
       inputs.home-manager.nixosModules.home-manager
-      ../services/ntp.nix
-      ../services/dns.nix
-      ../services/nix.nix
-      ../services/localization.nix
+      ../components/ntp.system.nix
+      ../components/dns.system.nix
+      ../components/nix.system.nix
+      ../components/localization.system.nix
+      ../components/security.system.nix
     ];
 
   boot.tmp.useTmpfs = lib.mkDefault true;
@@ -41,6 +41,9 @@
     jq
     yq
     gitAndTools.gitFull
+    moreutils
+    multitail
+    s-tui
   ];
 
   environment.variables = {
@@ -50,7 +53,7 @@
 
   home-manager = {
     useUserPackages = true;
-    extraSpecialArgs = {inherit inputs outputs;};
+    extraSpecialArgs = { inherit inputs outputs; };
   };
 
   nixpkgs = {

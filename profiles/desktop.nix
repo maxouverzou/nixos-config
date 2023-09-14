@@ -1,24 +1,28 @@
-{ config, pkgs, lib, ...}:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [
       ./common.nix
-      ../services/fonts
-      ../services/pipewire.nix
-      ../services/tailscale.nix
+      ../components/fonts.system.nix
+      ../components/pipewire.system.nix
+      ../components/tailscale.system.nix
     ];
 
   # boot splash instead of log messages
   boot.plymouth.enable = true;
 
- 	
+
   # enable flatpak support
   services.flatpak.enable = true;
   xdg.portal.enable = true;
 
   services.xserver.enable = lib.mkDefault true;
-  services.xserver.displayManager.lightdm.enable = lib.mkDefault true;
+  services.xserver.displayManager.lightdm = {
+    enable = lib.mkDefault true;
+    # greeter.package = pkgs.lightdm_qt;
+    greeters.slick.enable = true;
+  };
   services.xserver.desktopManager.plasma5.enable = lib.mkDefault true;
   services.xserver.displayManager.defaultSession = "plasmawayland";
 
@@ -65,31 +69,47 @@
 
   # install packages
   environment.systemPackages = with pkgs; [
+    # TODO: move most of these
     yt-dlp
     meld
     vlc
     cider
     vscode
+    kitty
     alacritty
     libsForQt5.kdeconnect-kde
-    libsForQt5.bismuth    
+    libsForQt5.bismuth
+
+    libsForQt5.korganizer
+    libsForQt5.kalendar
+
     plasma5Packages.plasma-thunderbolt
     libreoffice-qt
+    # replace with aspell?
     hunspell
     hunspellDicts.en_US
+
+    qownnotes
+    obsidian
+
+    okular
+    libsForQt5.marble # ?
+    konversation
+
+    # kexi: insecure
   ];
 
   # vscode WL
   environment.sessionVariables.NIXOS_OZONE_WL = "1"; # vs-code
 
-  networking.firewall = { 
+  networking.firewall = {
     enable = lib.mkDefault true;
-    allowedTCPPortRanges = [ 
+    allowedTCPPortRanges = [
       { from = 1714; to = 1764; } # KDE Connect
-    ];  
-    allowedUDPPortRanges = [ 
+    ];
+    allowedUDPPortRanges = [
       { from = 1714; to = 1764; } # KDE Connect
-    ];  
-  }; 
+    ];
+  };
 
 }

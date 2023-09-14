@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 {
-    # container virtualization
+  # container virtualization
   virtualisation.docker.enable = true;
 
   # hypervisor virtualization

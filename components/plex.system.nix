@@ -25,7 +25,7 @@
   }];
 
   systemd.automounts = [{
-    wantedBy = ["multi-user.target" "plex.service"];
+    wantedBy = [ "multi-user.target" "plex.service" ];
     automountConfig = {
       TimeoutIdleSec = "600";
     };
@@ -33,7 +33,7 @@
   }];
 
   powerManagement.enable = false;
-  
+
   # disable gdm auto-suspend
   systemd.targets.sleep.enable = false;
   systemd.targets.suspend.enable = false;
