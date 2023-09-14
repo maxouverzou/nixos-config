@@ -23,27 +23,29 @@
   networking.dhcpcd.runHook = "${pkgs.utillinux}/bin/agetty --reload";
 
   environment.systemPackages = with pkgs; [
-    htop
-    iotop
-    iftop
-    wget
     curl
-    whois
-    lsof
-    pv
-    xz
-    zip
-    unzip
-    vim
     file
-    tree
-    tealdeer
-    jq
-    yq
     gitAndTools.gitFull
+    htop
+    iftop
+    iotop
+    jq
+    lsof
     moreutils
     multitail
+    pv
+    rlwrap
     s-tui
+    tealdeer
+    tree
+    unzip
+    vim
+    wget
+    whois
+    xxd
+    xz
+    yq
+    zip
   ];
 
   environment.variables = {

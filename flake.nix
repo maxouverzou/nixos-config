@@ -50,6 +50,14 @@
           ./machines/nuc-box-2-plus/default.nix
         ];
       };
+
+      wheatley = lib.nixosSystem {
+        specialArgs = {inherit inputs outputs; };
+        
+        modules = [
+          ./machines/thinkpad-e11
+        ];
+      };
     };
   };
 }

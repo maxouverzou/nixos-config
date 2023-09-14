@@ -16,14 +16,15 @@ rec {
       "audio"
       "video"
     ]
+      ++ (optional (config.hardware.hackrf.enable || config.hardware.rtl-sdr.enable) "plugdev")
       ++ (optional config.networking.networkmanager.enable "networkmanager")
       ++ (optional config.virtualisation.docker.enable "docker")
       ++ (optional config.virtualisation.kvmgt.enable "kvm")
       ++ (optional config.virtualisation.libvirtd.enable "libvirtd")
       ++ (optional config.virtualisation.lxd.enable "lxd")
+      ++ (optional config.virtualisation.podman.enable "podman")
       ++ (optional config.virtualisation.virtualbox.host.enable "vboxusers") 
       ++ (optional programs.wireshark.enable "wireshark")
-      ++ (optional (config.hardware.hackrf.enable || config.hardware.rtl-sdr.enable) "plugdev")
     ;
   };
 
