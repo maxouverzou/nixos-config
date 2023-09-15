@@ -10,7 +10,9 @@ in {
 
   imports =
     [
+      ../../components/nix.user.nix
       ../../components/vscode.user.nix
+      ../../components/firefox.user.nix
     ];
 
   # Home Manager needs a bit of information about you and the paths it should

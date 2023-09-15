@@ -9,6 +9,8 @@
     
     nixos-hardware.url = "github:NixOS/nixos-hardware";
 
+    nurpkgs.url = "github:nix-community/NUR";
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
