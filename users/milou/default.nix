@@ -5,7 +5,8 @@ in
 rec {
   users.extraUsers.milou = {
     isNormalUser = true;
-    
+    initialPassword = "password";
+    uid = 1001;
     extraGroups = [
       "wheel"
       "audio"

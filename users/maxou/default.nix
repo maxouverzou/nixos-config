@@ -10,6 +10,8 @@ rec {
   };
 
   users.extraUsers.maxou = {
+    initialPassword = "password";
+    uid = 1000;
     isNormalUser = true;
     extraGroups = [
       "wheel"
