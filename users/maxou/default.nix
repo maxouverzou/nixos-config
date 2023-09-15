@@ -28,6 +28,8 @@ rec {
       ++ (optional config.virtualisation.virtualbox.host.enable "vboxusers") 
       ++ (optional programs.wireshark.enable "wireshark")
     ;
+
+    shell = pkgs.fish;
   };
 
   home-manager.users.maxou = {

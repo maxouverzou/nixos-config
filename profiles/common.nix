@@ -48,6 +48,8 @@
     zip
   ];
 
+  programs.fish.enable = true;
+
   environment.variables = {
     "EDITOR" = "vim";
     "VISUAL" = "vim";

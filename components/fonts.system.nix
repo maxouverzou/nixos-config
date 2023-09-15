@@ -14,6 +14,7 @@
       oxygenfonts
       source-code-pro
       twemoji-color-font
+      powerline
     ];
 
     fontconfig = {
