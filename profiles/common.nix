@@ -37,6 +37,7 @@
     rlwrap
     s-tui
     tealdeer
+    tmux
     tree
     unzip
     vim
