@@ -13,6 +13,7 @@
       ../components/nix.system.nix
       ../components/localization.system.nix
       ../components/security.system.nix
+      ../components/shell.system.nix
     ];
 
   boot.tmp.useTmpfs = lib.mkDefault true;

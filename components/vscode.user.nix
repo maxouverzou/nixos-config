@@ -61,7 +61,10 @@ in {
       "editor.rulers" = [80 100];
       "terminal.integrated.profiles.linux" = {
         "Nix Shell" = {
-          "path" = "nix-shell";
+          "path" = "fish";
+          "args" = [
+            "-i" "-c" "nix-shell"
+          ];
           "icon" = "terminal-linux";
         };
       };
