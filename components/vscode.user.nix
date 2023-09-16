@@ -18,6 +18,7 @@
     jnoortheen.nix-ide
     arrterian.nix-env-selector
 
+    eamodio.gitlens
     sanaajani.taskrunnercode
     ms-vsliveshare.vsliveshare
     redhat.vscode-yaml
