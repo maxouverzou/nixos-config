@@ -36,6 +36,7 @@ in {
     mutableExtensionsDir = false;
     
     userSettings = {
+      "editor.fontFamily" = ["'Fira Code'" "'Droid Sans Mono'" "'monospace'" "monospace"];
       "files.autoSave" = "off";
       "[nix]"."editor.tabSize" = 2;
       "[typescript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
