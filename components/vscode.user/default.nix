@@ -5,24 +5,13 @@
   pkgs,
   ...
 }: let
-  inherit (lib.generators) toKeyValue;
+  nix4vscode-extensions = (import ./extensions.nix) { pkgs = pkgs; lib = lib; };
 
-  marketplace-extensions = with inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace; [
-    ms-python.python
-    ms-python.isort
-    ms-python.vscode-pylance
-    
-    dbaeumer.vscode-eslint
-    esbenp.prettier-vscode
-
-    jnoortheen.nix-ide
+  universal-extensions = with inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace; [
     arrterian.nix-env-selector
-
-    eamodio.gitlens
+    jnoortheen.nix-ide
     sanaajani.taskrunnercode
     ms-vsliveshare.vsliveshare
-    redhat.vscode-yaml
-    coolbear.systemd-unit-file
     devicescript.devicescript-vscode
   ];
 
@@ -30,10 +19,21 @@ in {
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
-
-    extensions = marketplace-extensions;
     enableExtensionUpdateCheck = false;
     mutableExtensionsDir = false;
+
+    extensions = with pkgs.vscode-marketplace; [
+      nix4vscode-extensions.ms-python.python
+      nix4vscode-extensions.ms-python.isort
+      nix4vscode-extensions.ms-python.vscode-pylance
+      nix4vscode-extensions.dbaeumer.vscode-eslint
+      nix4vscode-extensions.esbenp.prettier-vscode
+      nix4vscode-extensions.eamodio.gitlens
+      nix4vscode-extensions.redhat.vscode-yaml
+      nix4vscode-extensions.coolbear.systemd-unit-file
+      nix4vscode-extensions.tamasfe.even-better-toml
+    ] ++ universal-extensions;
+
     
     userSettings = {
       "editor.fontFamily" = ["'Fira Code'" "'Droid Sans Mono'" "'monospace'" "monospace"];

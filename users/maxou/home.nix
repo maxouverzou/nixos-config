@@ -11,7 +11,7 @@ in {
   imports =
     [
       ../../components/nix.user.nix
-      ../../components/vscode.user.nix
+      ../../components/vscode.user
       ../../components/firefox.user.nix
     ];
 

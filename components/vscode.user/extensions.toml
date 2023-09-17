@@ -1,0 +1,57 @@
+vscode_version = "1.78.2"
+
+[[extensions]]
+publisher_name = "ms-python"
+extension_name = "python"
+
+[[extensions]]
+publisher_name = "ms-python"
+extension_name = "isort"
+
+[[extensions]]
+publisher_name = "ms-python"
+extension_name = "vscode-pylance"
+
+[[extensions]]
+publisher_name = "dbaeumer"
+extension_name = "vscode-eslint"
+
+[[extensions]]
+publisher_name = "esbenp"
+extension_name = "prettier-vscode"
+
+[[extensions]]
+publisher_name = "jnoortheen"
+extension_name = "nix-ide"
+
+[[extensions]]
+publisher_name = "arrterian"
+extension_name = "nix-env-selector"
+
+[[extensions]]
+publisher_name = "sanaajani"
+extension_name = "taskrunnercode"
+
+[[extensions]]
+publisher_name = "ms-vsliveshare"
+extension_name = "vsliveshare"
+
+[[extensions]]
+publisher_name = "redhat"
+extension_name = "vscode-yaml"
+
+[[extensions]]
+publisher_name = "coolbear"
+extension_name = "systemd-unit-file"
+
+[[extensions]]
+publisher_name = "devicescript"
+extension_name = "devicescript-vscode"
+
+[[extensions]]
+publisher_name = "eamodio"
+extension_name = "gitlens"
+
+[[extensions]]
+publisher_name = "tamasfe"
+extension_name = "even-better-toml"
