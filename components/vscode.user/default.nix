@@ -20,8 +20,10 @@ in {
     enable = true;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
+    
+    package = pkgs.vscodium;
+    
     mutableExtensionsDir = false;
-
     extensions = with pkgs.vscode-marketplace; [
       nix4vscode-extensions.ms-python.python
       nix4vscode-extensions.ms-python.isort

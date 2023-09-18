@@ -18,4 +18,5 @@
       options = "--delete-older-than 7d";
     };
   };
+  # nixpkgs.overlays = (import ../overlays);
 }
