@@ -62,6 +62,8 @@ in {
     cantor
     openscad	
     qgis-ltr
+    mitmproxy
+    logseq
 
     tile-stitch
     icloud-drive-fuse
