@@ -74,7 +74,7 @@
     meld
     vlc
     cider
-    vscode
+    # vscode
     kitty
     alacritty
     libsForQt5.kdeconnect-kde
