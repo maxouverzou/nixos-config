@@ -12,13 +12,13 @@ stdenv.mkDerivation {
   version = "unstable-2020-08-11";
 
   src = fetchFromGitHub {
-    owner = "ixs";
-    repo = "iCloudDriveFuse";
-    rev = "ffe78e562186a3c38bf9202fd51ff776486f37e1";
-    hash = "sha256-";
+    owner = "maxouverzou";
+    repo = "icloud-drive-fuse";
+    rev = "1d17a73a80308bd7431b95556ab2d256927461af";
+    hash = "sha256-+5hW5cMPPmjhi7SoJyuBhGGGMeSKqwEU7tWiqL7+NEo=";
   };
 
-  buildInputs = [ (python3.withPackages (p: with p; [ fusepy pyiCloud ])) ];
+  buildInputs = [ (python3.withPackages (p: with p; [ cachetools fusepy pyicloud ])) ];
 
   doCheck = false;
 
@@ -30,7 +30,7 @@ stdenv.mkDerivation {
 
   meta = {
     description = "iCloud Drive FUSE filesystem";
-    homepage = "https://github.com/ixs/iCloudDriveFuse/tree/master";
+    homepage = "https://github.com/maxouverzou/icloud-drive-fuse/tree/master";
     license = lib.licenses.gpl3Plus;
   };
 }

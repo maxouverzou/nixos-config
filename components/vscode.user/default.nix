@@ -16,6 +16,10 @@
   ];
 
 in {
+  home.packages = with pkgs; [
+    black
+  ];
+
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
@@ -30,7 +34,7 @@ in {
       nix4vscode-extensions.ms-python.vscode-pylance
       nix4vscode-extensions.dbaeumer.vscode-eslint
       nix4vscode-extensions.esbenp.prettier-vscode
-      nix4vscode-extensions.eamodio.gitlens
+      # nix4vscode-extensions.eamodio.gitlens
       nix4vscode-extensions.redhat.vscode-yaml
       nix4vscode-extensions.coolbear.systemd-unit-file
       nix4vscode-extensions.tamasfe.even-better-toml
@@ -38,6 +42,8 @@ in {
 
     
     userSettings = {
+      "python.formatting.blackPath" = "${pkgs.black}/bin/black";
+
       "editor.fontFamily" = ["'Fira Code'" "'Droid Sans Mono'" "'monospace'" "monospace"];
       "files.autoSave" = "off";
       "[nix]"."editor.tabSize" = 2;
@@ -54,6 +60,8 @@ in {
         "!GetAtt scalar"
         "!Sub scalar"
       ];
+      "python.formatting.provider" = "black";
+      "gitlens.plusFeatures.enabled" = false;
       "files.exclude" = {
         "**/.git" = true;
         "**/*.js" = {
