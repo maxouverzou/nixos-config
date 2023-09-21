@@ -6,11 +6,13 @@
   ...
 }: let
   inherit (lib.generators) toKeyValue;
+  hyprland = inputs.hyprland;
 in {
 
   imports =
     [
       ../../components/nix.user.nix
+      ../../components/hyprland.user.nix
       ../../components/vscode.user
       ../../components/firefox.user.nix
     ];

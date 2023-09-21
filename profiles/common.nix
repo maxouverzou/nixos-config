@@ -14,6 +14,7 @@
       ../components/localization.system.nix
       ../components/security.system.nix
       ../components/shell.system.nix
+      ../components/hyprland.system.nix
     ];
 
   boot.tmp.useTmpfs = lib.mkDefault true;
@@ -71,5 +72,4 @@
 
   # not supported with flakes
   # system.copySystemConfiguration = true;
-
 }

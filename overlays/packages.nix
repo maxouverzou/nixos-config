@@ -27,5 +27,6 @@ self: super:
   gpx-reduce = super.callPackage ../packages/gpx-reduce.nix { };
   tile-stitch = super.callPackage ../packages/tile-stitch.nix { };
   icloud-drive-fuse = super.callPackage ../packages/icloud-drive-fuse.nix { };
-
+  hyprshot = super.callPackage ../packages/hyprshot.nix { };
+  rofi-network-manager = super.callPackage ../packages/rofi-network-manager.nix { };
 }

@@ -15,6 +15,7 @@
       source-code-pro
       twemoji-color-font
       powerline
+      font-awesome
     ];
 
     fontconfig = {
