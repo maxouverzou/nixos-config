@@ -7,6 +7,7 @@
       ../components/fonts.system.nix
       ../components/pipewire.system.nix
       ../components/tailscale.system.nix
+      ../components/greetd.system.nix
     ];
 
   # boot splash instead of log messages
@@ -19,10 +20,10 @@
 
   services.xserver.enable = lib.mkDefault true;
   services.xserver.displayManager.lightdm = {
-    enable = lib.mkDefault true;
+    enable = false;
     # greeter.package = pkgs.lightdm_qt;
-    greeters.slick.enable = true;
   };
+
   services.xserver.desktopManager.plasma5.enable = lib.mkDefault true;
   services.xserver.displayManager.defaultSession = "plasmawayland";
 

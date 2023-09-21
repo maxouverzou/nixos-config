@@ -27,4 +27,19 @@ kanshi?
 darktable
 sqlitebrowser
 kitty
+
+https://github.com/CrazedProgrammer/nix/blob/master/dotfiles/bin/record
+
+grim slurp wf-recorder wl-clipboard
+nix-du
+swayosd
+
+greetd.tuigreet
+
+overlay mgmt: https://github.com/CrazedProgrammer/nix/blob/41d28a72efe277404d38a821fcf2211ab0f08f66/modules/home/default.nix#L14
+
+https://github.com/hyprland-community/awesome-hyprland
+
+https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_packages_on_nixos/
+delete ~/.mozilla.bak
 ```
