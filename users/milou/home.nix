@@ -5,9 +5,23 @@
   pkgs,
   ...
 }: {
-    #home.packages = with pkgs; [ httpie ];
+  imports =
+    [
+      ../../components/nix.user.nix
+    ];
+
+
+    home.packages = with pkgs; [
+      httpie
+      azure-cli
+      terraform
+      powershell
+    ];
 
     programs = {
+      fish = {
+        enable = true;
+      };
       bash = {
         enable = true;
         historyControl = [ "ignoredups" "ignorespace" ];
