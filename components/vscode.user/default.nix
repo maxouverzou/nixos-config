@@ -13,6 +13,7 @@
     sanaajani.taskrunnercode
     ms-vsliveshare.vsliveshare
     devicescript.devicescript-vscode
+    vscode-org-mode.org-mode
   ];
 
 in {
@@ -81,6 +82,7 @@ in {
         };
       };
       "terminal.integrated.defaultProfile.linux" = "Nix Shell";
+      "typescript.updateImportsOnFileMove.enabled" = "always";
     };
 
   };

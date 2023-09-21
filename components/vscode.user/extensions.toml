@@ -55,3 +55,7 @@ extension_name = "gitlens"
 [[extensions]]
 publisher_name = "tamasfe"
 extension_name = "even-better-toml"
+
+[[extensions]]
+publisher_name = "vscode-org-mode"
+extension_name = "org-mode"
