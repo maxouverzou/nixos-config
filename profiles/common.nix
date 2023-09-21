@@ -24,6 +24,7 @@
   networking.dhcpcd.runHook = "${pkgs.utillinux}/bin/agetty --reload";
 
   environment.systemPackages = with pkgs; [
+    bc
     curl
     file
     gitAndTools.gitFull
