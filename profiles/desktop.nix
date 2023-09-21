@@ -18,46 +18,13 @@
   services.flatpak.enable = true;
   xdg.portal.enable = true;
 
-  services.xserver.enable = lib.mkDefault true;
-  services.xserver.displayManager.lightdm = {
-    enable = false;
-    # greeter.package = pkgs.lightdm_qt;
-  };
-
-  services.xserver.desktopManager.plasma5.enable = lib.mkDefault true;
-  services.xserver.displayManager.defaultSession = "plasmawayland";
-
   services.hardware.bolt.enable = lib.mkDefault true;
 
   programs.partition-manager.enable = true;
   programs._1password.enable = true;
   programs._1password-gui.enable = true;
 
-  programs.firefox = {
-    enable = true;
-    package = pkgs.firefox-wayland;
-    policies = {
-      DisablePocket = true;
-      FirefoxHome = {
-        Search = true;
-        TopSites = true;
-        SponsoredTopSites = false;
-        Hightlights = false;
-        SponsoredPocket = false;
-        Snippets = false;
-        Locked = false;
-      };
-      ExtensionSettings = {
-        ublock-origin = {
-          installation_mode = "force_installed";
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-        };
-      };
-    };
-  };
-
-  environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
-
+  services.xserver.desktopManager.plasma5.enable = lib.mkDefault true;
   environment.plasma5.excludePackages = with pkgs.libsForQt5; [
     elisa
     gwenview
@@ -90,18 +57,11 @@
     hunspell
     hunspellDicts.en_US
 
-    qownnotes
-    obsidian
-
     okular
-    libsForQt5.marble # ?
     konversation
 
     # kexi: insecure
   ];
-
-  # vscode WL
-  environment.sessionVariables.NIXOS_OZONE_WL = "1"; # vs-code
 
   networking.firewall = {
     enable = lib.mkDefault true;

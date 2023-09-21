@@ -27,6 +27,13 @@ rec {
       ];
 
       settings = {
+        "browser.sessionstore.warnOnQuit" = true;
+        "browser.startup.page" = 3 /* restore session */;
+
+        # Enable DNS-over-HTTPS
+        "network.trr.mode" = 2 /* on with native fallback */;
+        "network.trr.excluded-domains" = "home.arpa";
+
         "browser.newtabpage.activity-stream.discoverystream.editorsPicksHeader.enabled" = false;
         "browser.newtabpage.activity-stream.discoverystream.newSponsoredLabel.enabled" = false;
         "browser.newtabpage.activity-stream.discoverystream.sponsored-collections.enabled" = false;
@@ -37,13 +44,15 @@ rec {
         "browser.newtabpage.activity-stream.feeds.snippets" = false;
         "extensions.pocket.showHome" = false;
         "extensions.pocket.enabled" = false;
-        "identity.fxaccounts.enabled" = false;
+        "identity.fxaccounts.enabled" = true;
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
+
       };
 
       search = {
         default = "DuckDuckGo";
+        force = true;
         engines = {
           "Nix Packages" = {
             urls = [{
