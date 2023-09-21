@@ -7,5 +7,6 @@
     kdenlive
     hugin
     digikam
+    handbrake
   ];
 }
