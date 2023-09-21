@@ -11,6 +11,9 @@
 
     nurpkgs.url = "github:nix-community/NUR";
 
+    nix-ld.url = "github:Mic92/nix-ld";
+    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
@@ -18,6 +21,7 @@
     self,
     nixpkgs,
     home-manager,
+    nix-ld,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -50,6 +54,7 @@
 
         modules = [
           ./machines/nuc-box-2-plus/default.nix
+          nix-ld.nixosModules.nix-ld
         ];
       };
 
