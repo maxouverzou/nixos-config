@@ -34,9 +34,17 @@ rec {
         "network.trr.mode" = 2 /* on with native fallback */;
         "network.trr.excluded-domains" = "home.arpa";
 
+        "identity.fxaccounts.enabled" = true;
+
+        "browser.newtabpage.activity-stream.discoverystream.enabled" = true;
+        "browser.newtabpage.activity-stream.feeds.discoverystreamfeed"= true;
+        "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
+
+
         "browser.newtabpage.activity-stream.discoverystream.editorsPicksHeader.enabled" = false;
         "browser.newtabpage.activity-stream.discoverystream.newSponsoredLabel.enabled" = false;
         "browser.newtabpage.activity-stream.discoverystream.sponsored-collections.enabled" = false;
+        "browser.newtabpage.activity-stream.section.highlights.includePocket" = false;
         "browser.newtabpage.activity-stream.showSponsored" = false;
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
         "browser.urlbar.suggest.quicksuggest.sponsored" = false;
@@ -44,10 +52,8 @@ rec {
         "browser.newtabpage.activity-stream.feeds.snippets" = false;
         "extensions.pocket.showHome" = false;
         "extensions.pocket.enabled" = false;
-        "identity.fxaccounts.enabled" = true;
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
-
       };
 
       search = {
