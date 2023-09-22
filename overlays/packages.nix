@@ -29,4 +29,5 @@ self: super:
   icloud-drive-fuse = super.callPackage ../packages/icloud-drive-fuse.nix { };
   hyprshot = super.callPackage ../packages/hyprshot.nix { };
   rofi-network-manager = super.callPackage ../packages/rofi-network-manager.nix { };
+  git-diff-image = super.callPackage ../packages/git-diff-image.nix { };
 }
