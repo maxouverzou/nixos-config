@@ -24,6 +24,19 @@ self: super:
     '';
   });
 
+  /**
+    to be able to use nm w/ pygobject; requires compilation of webkitgtk!
+   */
+  networkmanager-with-introspection = super.networkmanager.overrideAttrs (oldAttrs: {
+    buildInputs = (oldAttrs.buildInputs or []) ++ [ super.gobject-introspection ];
+    configureFlags = (oldAttrs.configureFlags or []) ++ [ "--enable-introspection" ];
+
+    passthru = {
+      gir_path = "/share/gir-1.0";
+      gi_typelib_path = "/lib/girepository-1.0";
+    };
+  });
+
   gpx-reduce = super.callPackage ../packages/gpx-reduce.nix { };
   tile-stitch = super.callPackage ../packages/tile-stitch.nix { };
   icloud-drive-fuse = super.callPackage ../packages/icloud-drive-fuse.nix { };
