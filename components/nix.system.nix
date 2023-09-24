@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    nix-du
+  ];
+
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
