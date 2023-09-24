@@ -1,7 +1,7 @@
 self: super:
 let
   pythonOverrides = {
-    packageOverrides = import ../custom/python-packages.nix { pkgs = super.pkgs; fetchurl = super.fetchurl; fetchgit = super.fetchgit; fetchhg = super.fetchhg; };
+    packageOverrides = import ../custom/python-packages.nix super;
   };
 in
 {
