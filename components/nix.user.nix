@@ -4,9 +4,8 @@
 }: {
   config = {
     nixpkgs = {
-      overlays = [
+      overlays = (import ../packages/overlays) ++ [
         inputs.nurpkgs.overlay
-        (import ../overlays/packages.nix)
       ];
       config = {
         permittedInsecurePackages = [
