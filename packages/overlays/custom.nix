@@ -13,6 +13,5 @@ in
   tile-stitch = super.callPackage ../custom/tile-stitch.nix { };
   icloud-drive-fuse = super.callPackage ../custom/icloud-drive-fuse.nix { };
   hyprshot = super.callPackage ../custom/hyprshot.nix { };
-  rofi-network-manager = super.callPackage ../custom/rofi-network-manager.nix { };
   git-diff-image = super.callPackage ../custom/git-diff-image.nix { };
 }
