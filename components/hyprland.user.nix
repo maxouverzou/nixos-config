@@ -65,6 +65,12 @@ in
     ];
   };
 
+  services.gammastep = {
+    enable = true;
+    provider = "manual";
+    latitude = 47;
+    longitude = 122;
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;
