@@ -35,6 +35,48 @@ in
     package = pkgs.swaylock-effects;
   };
 
+  programs.wlogout = {
+    enable = true;
+    layout = [
+      {
+        label = "lock";
+        action = "swaylock ${swaylockOptions}";
+        text = "Lock";
+        keybind = "l";
+      }
+      {
+        label = "hibernate";
+        action = "systemctl hibernate";
+        text = "Hibernate";
+        keybind = "h";
+      }
+      {
+        label = "logout";
+        action = "loginctl terminate-user $USER";
+        text = "Logout";
+        keybind = "e";
+      }
+      {
+        label = "shutdown";
+        action = "systemctl poweroff";
+        text = "Shutdown";
+        keybind = "s";
+      }
+      {
+        label = "suspend";
+        action = "systemctl suspend";
+        text = "Suspend";
+        keybind = "u";
+      }
+      {
+        label = "reboot";
+        action = "systemctl reboot";
+        text = "Reboot";
+        keybind = "r";
+      }
+    ];
+  };
+
   home.file = {
     ".mpvpaper-cycle-pause.sh" = {
       text = ''
@@ -47,6 +89,7 @@ in
 
   services.swayidle = {
     enable = true;
+    systemdTarget = "graphical-session.target";
     events = [
       {
         event = "lock";
@@ -67,7 +110,7 @@ in
 
   services.gammastep = {
     enable = true;
-    provider = "manual";
+    provider = "geoclue2";
     latitude = 47;
     longitude = 122;
   };
@@ -81,7 +124,8 @@ in
 
       $mod = SUPER
 
-      bind = $mod, Q, exit
+      bind = $mod, Q, exec, wlogout
+      bind = $mod SHIFT, Q, exit
       bind = $mod SHIFT, C, killactive
       bind = $mod, R, exec, hyprctl reload
 
