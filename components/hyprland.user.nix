@@ -30,6 +30,32 @@ in
     wf-recorder
   ];
 
+  programs.waybar = {
+    enable = true;
+    systemd.enable = true;
+    settings = {
+      mainBar = {
+        layer = "top";
+        position = "top";
+        height = 30;
+        #output = [
+        #  "eDP-1"
+        #  "HDMI-A-1"
+        #];
+        modules-left = [ "hyprland/workspaces" "wlr/workspaces" "hyprland/submap" "custom/media" ];
+        modules-center = [ "hyprland/window" ];
+        modules-right = [ "idle_inhibitor" "pulseaudio" "network" "cpu" "memory" "temperature" "backlight" "keyboard-state" "hyprland/language" "battery" "battery#bat2" "clock" "tray" ];
+        "hyprland/workspaces" = {
+          # disable-scroll = true;
+          all-outputs = true;
+        };
+        "wlr/workspaces" = {
+          all-outputs = true;
+        };
+      };
+    };
+  };
+
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;
@@ -118,13 +144,22 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = ''
+      general {
+        layout = master
+      }
+
+      master {
+        new_is_master = false
+        mfact = 0.5
+      }
+
       exec-once = ${pkgs.mako}/bin/mako
-      exec-once = ${pkgs.waybar}/bin/waybar
+      # exec-once = ${pkgs.waybar}/bin/waybar
       exec-once = ${pkgs.mpvpaper}/bin/mpvpaper --mpv-options "no-audio loop-playlist shuffle panscan=1 input-ipc-server=${mpvpaperSocket}" '*' ~/Development/playground/python/apple-tv-screensavers/files/
 
       $mod = SUPER
 
-      bind = $mod, Q, exec, wlogout
+      bind = $mod, Q, exec, [float;noanim] wlogout
       bind = $mod SHIFT, Q, exit
       bind = $mod SHIFT, C, killactive
       bind = $mod, R, exec, hyprctl reload
@@ -138,16 +173,27 @@ in
       bind = CTRL SHIFT, 3, exec, ${pkgs.hyprshot}/bin/hyprshot -m output
       bind = CTRL SHIFT, 4, exec, ${pkgs.hyprshot}/bin/hyprshot -m region
 
-      bind = $mod, L, exec, ${pkgs.swaylock-effects}/bin/swaylock ${swaylockOptions}
+      # bind = $mod, L, exec, ${pkgs.swaylock-effects}/bin/swaylock ${swaylockOptions}
 
       # Scroll through existing workspaces with mainMod + scroll
       bind = $mod, mouse_down, workspace, e+1
       bind = $mod, mouse_up, workspace, e-1
 
+      # master shortcuts
+
+      bind = $mod CTRL, Return, layoutmsg, swapwithmaster
+
+      bind = $mod, SPACE, layoutmsg, orientationnext
+      bind = $mod SHIFT, SPACE, layoutmsg, orientationprev
+
+      bind = $mod, H, splitratio, -0.05
+      bind = $mod, L, splitratio, +0.05
+
+      bind = $mod SHIFT, H, layoutmsg, addmaster
+      bind = $mod SHIFT, L, layoutmsg, removemaster
+
       #bind = ALT, tab, workspace, m+1
       #bind = ALT SHIT, tab, workspace, m-1
-
-      bind = , Print, exec, grimblast copy area
 
       # workspaces
       # binds $mod + [shift +] {1..10} to [move to] workspace {1..10}
