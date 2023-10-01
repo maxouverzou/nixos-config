@@ -18,6 +18,8 @@ rec {
       "audio"
       "video"
       "input"
+      "dialout"
+      "tty"
     ]
       ++ (optional (config.hardware.hackrf.enable || config.hardware.rtl-sdr.enable) "plugdev")
       ++ (optional config.networking.networkmanager.enable "networkmanager")

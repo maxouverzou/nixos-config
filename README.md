@@ -1,14 +1,12 @@
 ```
 # update
-sudo nix-channel --update
+nix flake update
 
 # flake test build
 nixos-rebuild build --flake .#
 
 # flake apply
 nixos-rebuild switch --flake .#
-
-
 
 # TODO?
 services.fstrim.enable
@@ -26,20 +24,26 @@ kanshi?
 # Apps
 darktable
 sqlitebrowser
-kitty
-
-https://github.com/CrazedProgrammer/nix/blob/master/dotfiles/bin/record
-
-grim slurp wf-recorder wl-clipboard
-nix-du
-swayosd
-
-greetd.tuigreet
-
-overlay mgmt: https://github.com/CrazedProgrammer/nix/blob/41d28a72efe277404d38a821fcf2211ab0f08f66/modules/home/default.nix#L14
-
-https://github.com/hyprland-community/awesome-hyprland
 
 https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_packages_on_nixos/
-delete ~/.mozilla.bak
+
 ```
+# https://github.com/hyprland-community/awesome-hyprland
+- udisk
+- configure waybar
+  - hyprland/workaces: Unknown module
+- wayland options
+- osd
+- hyprland layouts & shortcuts
+  - https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.conf
+  - https://github.com/alexjercan/hyprland.dotfiles/blob/master/hypr/hyprland.conf
+- https://github.com/loserMcloser/waylogout
+- https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway
+
+# RPI imager
+https://github.com/nix-community/nixos-generators
+
+# Impermanence
+- https://github.com/nix-community/impermanence
+- https://news.ycombinator.com/item?id=37510297
+- https://news.ycombinator.com/item?id=37218289

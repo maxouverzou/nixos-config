@@ -19,6 +19,8 @@
 
   boot.tmp.useTmpfs = lib.mkDefault true;
 
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   # show IP in login screen
   # https://github.com/NixOS/nixpkgs/issues/63322
   environment.etc."issue.d/ip.issue".text = "\\4\n";
@@ -50,6 +52,7 @@
     xz
     yq
     zip
+    screen
   ];
 
   programs.fish.enable = true;
