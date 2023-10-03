@@ -29,9 +29,25 @@
   services.openssh.enable = true;
 
   users.users.nixos = {
+    # from https://github.com/NixOS/nixpkgs/blob/df1882cd877a510025be5156d29a0794a762341d/nixos/modules/profiles/installation-device.nix
+    isNormalUser = true;
+    extraGroups = [ "wheel" "networkmanager" "video" ];
+    # Allow the graphical user to login without password
+    initialHashedPassword = "";
+
     openssh.authorizedKeys.keys = [
       (builtins.readFile ../../resources/users/maxou/kiosk.pub)
     ];
+  };
+
+  # documentation.enable = false;
+
+  documentation = {
+    enable = false;
+    man.enable = false;
+    info.enable = false;
+    doc.enable = false;
+    nixos.enable = false;
   };
 
   nixpkgs.config.allowUnfree = true;

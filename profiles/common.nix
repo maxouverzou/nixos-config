@@ -18,7 +18,8 @@
 
   boot.tmp.useTmpfs = lib.mkDefault true;
 
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+  boot.binfmt.emulatedSystems = []
+    ++ (lib.optional (pkgs.system == "x86_64-linux") "aarch64-linux");
 
   # show IP in login screen
   # https://github.com/NixOS/nixpkgs/issues/63322

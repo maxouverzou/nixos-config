@@ -79,10 +79,21 @@
       };
 
       packages.x86_64-linux = {
-        rpi = nixos-generators.nixosGenerate {
+        rpi3 = nixos-generators.nixosGenerate {
+          specialArgs = { inherit inputs outputs; };
           system = "aarch64-linux";
           modules = [
             ./machines/rpi3
+          ];
+          format = "sd-aarch64-installer";
+        };
+
+        gertry = nixos-generators.nixosGenerate {
+          specialArgs = { inherit inputs outputs; };
+          system = "aarch64-linux";
+          modules = [
+            ./machines/rpi3
+            ./hosts/gertry-3000
           ];
           format = "sd-aarch64-installer";
         };

@@ -1,0 +1,22 @@
+{  
+  virtualisation.oci-containers = {
+    backend = "podman";
+    containers.homeassistant = {
+      autoStart = false;
+      volumes = [ "/mnt/config/home-assistant:/config" ];
+      environment.TZ = "America/Los_Angeles";
+      image = "ghcr.io/home-assistant/home-assistant:stable";
+      extraOptions = [
+        "--pull=newer"
+        "--network=host" 
+        "--device=/dev/ttyACM0:/dev/ttyACM0"
+      ];
+    };
+  };
+  systemd.services.podman-homeassistant.after = [ "systemd-timesyncd.service" ];
+}
+
+/**
+  TODO stop using --network=host
+  - https://community.home-assistant.io/t/is-there-an-official-list-of-ports/395592/5
+ */

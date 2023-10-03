@@ -17,6 +17,7 @@
     
     "nohibernate"
     "loglevel=7"
+    "rootwait"
   ];
 
   fileSystems = {
