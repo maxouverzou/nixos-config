@@ -8,6 +8,9 @@ nixos-rebuild build --flake .#
 # flake apply
 nixos-rebuild switch --flake .#
 
+# build rpi image
+nix build .#rpi
+
 # TODO?
 services.fstrim.enable
 zramSwap.enable = true;
@@ -29,11 +32,15 @@ https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_package
 
 ```
 # https://github.com/hyprland-community/awesome-hyprland
+- breakup into wlroots-desktops
+- breezy-dark / adawaita?
 - udisk
 - configure waybar
   - hyprland/workaces: Unknown module
 - wayland options
-- osd
+- osd: avizo
+- networkmanager_dmenu
+- SwayNotificationCenter
 - hyprland layouts & shortcuts
   - https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.conf
   - https://github.com/alexjercan/hyprland.dotfiles/blob/master/hypr/hyprland.conf
