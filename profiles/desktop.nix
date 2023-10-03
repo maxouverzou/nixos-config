@@ -8,7 +8,8 @@
       ../components/pipewire.system.nix
       ../components/tailscale.system.nix
       ../components/greetd.system.nix
-      ../components/kde5.system.nix
+      # ../components/kde5.system.nix
+      ../components/hyprland.system.nix
     ];
 
   # boot splash instead of log messages
