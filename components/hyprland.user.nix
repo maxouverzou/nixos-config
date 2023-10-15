@@ -28,6 +28,7 @@ in
   home.packages = with pkgs; [
     wl-clipboard
     wf-recorder
+    ranger
   ];
 
   programs.waybar = {

@@ -4,5 +4,7 @@
 
   services.geoclue2.enable = true;
 
+  services.blueman.enable = hardware.bluetooth.enable;
+
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 }
