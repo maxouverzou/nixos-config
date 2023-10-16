@@ -73,6 +73,7 @@
 
           modules = [
             ./machines/thinkpad-e11
+            ./hosts/wheathley
           ];
         };
 
