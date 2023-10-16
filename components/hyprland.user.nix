@@ -154,6 +154,10 @@ in
         mfact = 0.5
       }
 
+      misc {
+        disable_hyprland_logo = true
+      }
+
       exec-once = ${pkgs.mako}/bin/mako
       # exec-once = ${pkgs.waybar}/bin/waybar
       exec-once = ${pkgs.mpvpaper}/bin/mpvpaper --mpv-options "no-audio loop-playlist shuffle panscan=1 input-ipc-server=${mpvpaperSocket}" '*' ~/Development/playground/python/apple-tv-screensavers/files/
