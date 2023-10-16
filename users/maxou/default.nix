@@ -41,6 +41,9 @@ rec {
   };
 
   home-manager.users.maxou = {
-    imports = [ ./home.nix ];
+    imports = [ ./home.nix ]
+    # TODO: hic sunt dracones: using greetd to detect graphical systems
+    ++ (optional config.services.greetd.enable ./home-graphical.nix);
   };
+
 }

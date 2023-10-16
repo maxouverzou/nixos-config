@@ -6,15 +6,12 @@
   ...
 }: let
   inherit (lib.generators) toKeyValue;
-  hyprland = inputs.hyprland;
+  # hyprland = inputs.hyprland;
 in {
 
   imports =
     [
       ../../components/nix.user.nix
-      ../../components/hyprland.user.nix
-      ../../components/vscode.user
-      ../../components/firefox.user.nix
     ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -41,32 +38,13 @@ in {
     '';
   };
 
-  programs.bash = {
-    enable = true;
-    /*
-    initExtra = ''
-      if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ''\${BASH_EXECUTION_STRING} ]]
-      then
-        shopt -q login_shell && LOGIN_OPTION="--login" || LOGIN_OPTION=""
-        exec fish $LOGIN_OPTION
-      fi
-    '';
-    */
-  };
-
+  programs.bash.enable = true;
   programs.powerline-go.enable = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     awscli2
-
-    cantor
-    openscad	
-    qgis-ltr
-    mitmproxy
-    logseq
-
     tile-stitch
     icloud-drive-fuse
 
