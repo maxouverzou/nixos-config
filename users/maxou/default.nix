@@ -1,6 +1,7 @@
 { config, inputs, pkgs, lib, ... }:
 let
   inherit (lib) mkDefault optional optionals;
+  nix-doom-emacs = inputs.nix-doom-emacs;
 in
 rec {
   # TODO: remove this
@@ -41,7 +42,10 @@ rec {
   };
 
   home-manager.users.maxou = {
-    imports = [ ./home.nix ]
+    imports = [
+      nix-doom-emacs.hmModule
+      ./home.nix
+    ]
     # TODO: hic sunt dracones: using greetd to detect graphical systems
     ++ (optional config.services.greetd.enable ./home-graphical.nix);
   };

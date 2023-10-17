@@ -41,6 +41,13 @@ in {
   programs.bash.enable = true;
   programs.powerline-go.enable = true;
 
+  programs.doom-emacs = {
+    enable = true;
+    doomPrivateDir = ./doom.d;
+  };
+
+  services.emacs.enable = true;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [

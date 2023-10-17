@@ -22,6 +22,9 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     hyprland.url = "github:hyprwm/Hyprland";
+
+    nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";
+    nix-doom-emacs.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -30,6 +33,7 @@
     , home-manager
     , nix-ld
     , nixos-generators
+    , nix-doom-emacs
     , ...
     } @ inputs:
     let
@@ -74,6 +78,15 @@
           modules = [
             ./machines/thinkpad-e11
             ./hosts/wheathley
+          ];
+        };
+
+        gertry = lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+
+          modules = [
+            ./machines/trigkey-green-g4
+            ./hosts/gertry-3000
           ];
         };
 
