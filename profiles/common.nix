@@ -21,6 +21,16 @@
   boot.binfmt.emulatedSystems = []
     ++ (lib.optional (pkgs.system == "x86_64-linux") "aarch64-linux");
 
+  console = {
+    earlySetup = true;
+    font = "ter-powerline-v16b";
+    packages = with pkgs; [
+      terminus_font
+      powerline-fonts
+    ];
+  };
+
+
   # show IP in login screen
   # https://github.com/NixOS/nixpkgs/issues/63322
   environment.etc."issue.d/ip.issue".text = "\\4\n";
