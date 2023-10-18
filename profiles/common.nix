@@ -31,7 +31,6 @@
     curl
     file
     gitAndTools.gitFull
-    htop
     iftop
     iotop
     jq
@@ -42,7 +41,6 @@
     rlwrap
     s-tui
     tealdeer
-    tmux
     tree
     unzip
     vim
@@ -53,7 +51,35 @@
     yq
     zip
     screen
+
+    mc
+    ranger
+
+    acpi # for tmux-battery
   ];
+
+  programs.htop = {
+    enable = true;
+    settings = {
+      show_program_path = false; # hide nix-store paths
+    };
+  };
+
+  programs.tmux = {
+    enable = true;
+    plugins = [
+      pkgs.tmuxPlugins.battery
+      pkgs.tmuxPlugins.sysstat
+    ];
+    extraConfig = ''
+      set -g @sysstat_mem_view_tmpl '#{mem.pused}'
+      set -g @sysstat_cpu_view_tmpl '#{cpu.pused}'
+
+      set -g status-right 'BAT:#{battery_percentage} CPU:#{sysstat_cpu} MEM:#{sysstat_mem} #{sysstat_loadavg}'
+      run-shell ${pkgs.tmuxPlugins.battery}/share/tmux-plugins/battery/battery.tmux
+      run-shell ${pkgs.tmuxPlugins.sysstat}/share/tmux-plugins/sysstat/sysstat.tmux
+    '';  
+};
 
   programs.fish.enable = true;
 
