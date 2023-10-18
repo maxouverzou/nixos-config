@@ -9,7 +9,7 @@
     ];
 
   boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "i915" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
