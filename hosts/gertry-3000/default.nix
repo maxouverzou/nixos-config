@@ -1,4 +1,4 @@
-{ pkgs, ... }: let
+{ pkgs, modulesPath, ... }: let
   container-services = [
     "podman-homebridge.service"
     # "podman-homeassistant.service"
@@ -7,8 +7,8 @@
 in {
   imports =
     [
-      <nixpkgs/nixos/modules/profiles/headless.nix>
-      <nixpkgs/nixos/modules/profiles/minimal.nix>
+      (modulesPath + "/profiles/headless.nix")
+      (modulesPath + "/profiles/minimal.nix")
       ../../profiles/common.nix
       ../../components/avahi-server.system.nix
       # ../../components/plex.system.nix
