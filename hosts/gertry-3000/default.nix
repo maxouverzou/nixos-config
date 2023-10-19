@@ -7,13 +7,20 @@
 in {
   imports =
     [
+      <nixpkgs/nixos/modules/profiles/headless.nix>
+      <nixpkgs/nixos/modules/profiles/minimal.nix>
       ../../profiles/common.nix
+      ../../components/avahi-server.system.nix
+      # ../../components/plex.system.nix
+
       #./containers/home-assistant.nix
       #./containers/home-bridge.nix
       #./containers/pihole.nix
       #./services/home-assistant.nix
       ./services/iot-router.nix
       ./services/tailscale.nix
+
+      ../../users/maxou
     ];
 
   networking = {
@@ -23,12 +30,16 @@ in {
     firewall.enable = false;
   };
 
-  services.journald.extraConfig = ''
-    Storage=volatile
-  '';
+  services.openssh = {
+    enable = true;
+    # TODO: remove this once setup is complete
+    settings.PasswordAuthentication = true;
+  };
+
+  # TODO: remove this once setup is complete
+  networking.networkmanager.enable = true;
 
   # container services config persistance
-
   environment.systemPackages = with pkgs; [
     nfs-utils
   ];
