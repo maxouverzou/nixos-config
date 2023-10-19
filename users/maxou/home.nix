@@ -44,6 +44,7 @@ in {
   programs.doom-emacs = {
     enable = true;
     doomPrivateDir = ./doom.d;
+    emacsPackage = lib.mkDefault pkgs.emacs-nox;
   };
 
   services.emacs.enable = true;

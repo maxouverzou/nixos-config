@@ -13,6 +13,8 @@
       ../../components/firefox.user.nix
     ];
 
+  programs.doom-emacs.emacsPackage = pkgs.emacs;
+
   home.packages = with pkgs; [
     # cantor
 
