@@ -55,6 +55,10 @@ in {
     tile-stitch
     icloud-drive-fuse
 
+    (python3.withPackages(ps: with ps; [
+      ipython
+    ]))
+
     # python3 # treemacs wants that
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
