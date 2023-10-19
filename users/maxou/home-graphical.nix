@@ -21,8 +21,8 @@
 
     libreoffice
     hunspell
-    hunspell.en_EN
-    hunspell.fr_FR
+    hunspellDicts.en_US
+    hunspellDicts.fr-reforme1990
   ];
 
 }
