@@ -28,6 +28,10 @@
   };
   services.openssh.enable = true;
 
+  services.journald.extraConfig = ''
+    Storage=volatile
+  '';
+
   users.users.nixos = {
     # from https://github.com/NixOS/nixpkgs/blob/df1882cd877a510025be5156d29a0794a762341d/nixos/modules/profiles/installation-device.nix
     isNormalUser = true;
