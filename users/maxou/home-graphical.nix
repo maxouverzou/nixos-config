@@ -14,9 +14,15 @@
     ];
 
   home.packages = with pkgs; [
-    cantor
+    # cantor
+
     openscad	
     qgis-ltr
+
+    libreoffice
+    hunspell
+    hunspell.en_EN
+    hunspell.fr_FR
   ];
 
 }
