@@ -37,7 +37,7 @@ in {
   };
 
   # TODO: remove this once setup is complete
-  networking.networkmanager.enable = true;
+  networking.networkmanager.enable = false;
 
   # container services config persistance
   environment.systemPackages = with pkgs; [
