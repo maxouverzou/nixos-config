@@ -40,7 +40,7 @@
     bc
     curl
     file
-    gitAndTools.gitFull
+    git
     iftop
     iotop
     jq
