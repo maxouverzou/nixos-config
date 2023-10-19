@@ -4,12 +4,6 @@ let
   nix-doom-emacs = inputs.nix-doom-emacs;
 in
 rec {
-  # TODO: remove this
-  programs.wireshark = {
-    enable = true;
-    package = pkgs.wireshark;
-  };
-
   users.extraUsers.maxou = {
     initialPassword = "password";
     uid = 1000;
@@ -30,7 +24,7 @@ rec {
     ++ (optional config.virtualisation.lxd.enable "lxd")
     ++ (optional config.virtualisation.podman.enable "podman")
     ++ (optional config.virtualisation.virtualbox.host.enable "vboxusers")
-    ++ (optional programs.wireshark.enable "wireshark")
+    ++ (optional config.programs.wireshark.enable "wireshark")
     ;
 
     shell = pkgs.fish;
