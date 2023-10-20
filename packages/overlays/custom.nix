@@ -14,4 +14,5 @@ in
   icloud-drive-fuse = super.callPackage ../custom/icloud-drive-fuse.nix { };
   hyprshot = super.callPackage ../custom/hyprshot.nix { };
   git-diff-image = super.callPackage ../custom/git-diff-image.nix { };
+  unbound-blocklist-stevenblack = super.callPackage ../custom/unbound-blocklist-stevenblack.nix { };
 }
