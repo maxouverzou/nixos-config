@@ -1,7 +1,7 @@
 { pkgs, modulesPath, ... }: let
   container-services = [
     "podman-homebridge.service"
-    # "podman-homeassistant.service"
+    "podman-homeassistant.service"
     "podman-pihole.service"
   ];
 in {
@@ -11,13 +11,13 @@ in {
       (modulesPath + "/profiles/minimal.nix")
       ../../profiles/common.nix
       ../../components/avahi-server.system.nix
-      # ../../components/plex.system.nix
+      ../../components/plex.system.nix
 
-      #./containers/home-assistant.nix
+      ./containers/home-assistant.nix
       #./containers/home-bridge.nix
       #./containers/pihole.nix
       #./services/home-assistant.nix
-      ./services/iot-router.nix
+      #./services/iot-router.nix
       ./services/tailscale.nix
 
       ../../users/maxou
@@ -63,10 +63,4 @@ in {
     };
     where = "/mnt/config";
   }];
-
-  # ensure timesyncd is up before starting container services
-  # inacurate date/time may fail ssl cert check when pulling images
-  
-  systemd.services.systemd-timesyncd.before = container-services;
 }
-

@@ -2,14 +2,18 @@
   virtualisation.oci-containers = {
     backend = "podman";
     containers.homeassistant = {
-      autoStart = false;
-      volumes = [ "/mnt/config/home-assistant:/config" ];
+      autoStart = true;
+      volumes = [
+        "/mnt/config/home-assistant:/config"
+        "/var/run/dbus/:/var/run/dbus/"
+      ];
+
       environment.TZ = "America/Los_Angeles";
       image = "ghcr.io/home-assistant/home-assistant:stable";
       extraOptions = [
         "--pull=newer"
         "--network=host" 
-        "--device=/dev/ttyACM0:/dev/ttyACM0"
+        # "--device=/dev/ttyACM0:/dev/ttyACM0"
       ];
     };
   };
