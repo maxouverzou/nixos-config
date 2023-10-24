@@ -69,7 +69,7 @@
           modules = [
             ./machines/nuc-box-2-plus/default.nix
             ./hosts/kiosk
-            nix-ld.nixosModules.nix-ld
+            # nix-ld.nixosModules.nix-ld
           ];
         };
 

@@ -1,11 +1,9 @@
-{pkgs, ...}: {
+{pkgs, inputs, ...}: {
+  imports = [
+    inputs.nix-ld.nixosModules.nix-ld
+  ];
+
   programs.nix-ld.dev.enable = true;
-
-  # container virtualization
-  virtualisation.docker.enable = true;
-
-  # hypervisor virtualization
-  # virtualisation.virtualbox.host.enable = true;
 
   services.openssh = {
     enable = true;
