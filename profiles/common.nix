@@ -45,9 +45,11 @@
     iotop
     jq
     lsof
+    pciutils
     moreutils
     multitail
     pv
+    dig
     rlwrap
     s-tui
     tealdeer
@@ -82,6 +84,8 @@
       pkgs.tmuxPlugins.sysstat
     ];
     extraConfig = ''
+      set -g default-terminal "screen-256color"
+
       set -g @sysstat_mem_view_tmpl '#{mem.pused}'
       set -g @sysstat_cpu_view_tmpl '#{cpu.pused}'
 
