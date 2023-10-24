@@ -1,8 +1,11 @@
-{ config, pkgs, inputs, home-manager, ... }:
-
-{
+{ config, pkgs, inputs, ... }: let
+  nixos-hardware = inputs.nixos-hardware.nixosModules;
+in {
   imports =
     [
+      nixos-hardware.common-cpu-intel
+      # nixos-hardware.common-pc # pulls libinput
+      nixos-hardware.common-pc-ssd
       ./hardware-configuration.nix
     ];
 
@@ -12,6 +15,8 @@
   # no access time and continuous TRIM for SSD
   fileSystems."/".options = [ "noatime" "discard" ];
   fileSystems."/boot".options = [ "noatime" "discard" ];
+
+  networking.wireless.enable = true;
 
   hardware.cpu.intel.updateMicrocode = true;
   hardware.bluetooth.enable = true;
