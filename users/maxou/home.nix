@@ -1,13 +1,14 @@
-{
-  config,
-  inputs,
-  lib,
-  pkgs,
-  ...
-}: let
+{ config
+, inputs
+, lib
+, pkgs
+, ...
+}:
+let
   inherit (lib.generators) toKeyValue;
   # hyprland = inputs.hyprland;
-in {
+in
+{
 
   imports =
     [
@@ -27,10 +28,10 @@ in {
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
   home.stateVersion = "23.05"; # Please read the comment before changing.
-  
+
   # TODO: move somewhere else
   nixpkgs.config.allowUnfree = true;
-  
+
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
@@ -56,7 +57,7 @@ in {
     tile-stitch
     icloud-drive-fuse
 
-    (python3.withPackages(ps: with ps; [
+    (python3.withPackages (ps: with ps; [
       ipython
     ]))
 
@@ -106,6 +107,19 @@ in {
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+  programs.git = {
+    enable = true;
+    diff-so-fancy.enable = true;
+    extraConfig = {
+      user = {
+        name = "Maxou Verzou";
+        email = "maxou@integratedintegrals.com";
+      };
+    };
+  };
+
+  programs.gitui.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
