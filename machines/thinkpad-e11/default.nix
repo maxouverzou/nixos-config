@@ -1,8 +1,12 @@
-{ config, pkgs, inputs, home-manager, ... }:
-
-{
+{ config, pkgs, inputs, ... }: let
+  nixos-hardware = inputs.nixos-hardware.nixosModules;
+in {
   imports =
     [
+      nixos-hardware.common-cpu-intel
+      nixos-hardware.common-gpu-intel
+      nixos-hardware.common-pc-laptop
+      nixos-hardware.common-pc-laptop-ssd
       ./hardware-configuration.nix
     ];
 
