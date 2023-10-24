@@ -48,7 +48,18 @@ in
     emacsPackage = lib.mkDefault pkgs.emacs-nox;
   };
 
+  programs.ssh = {
+    enable = true;
+    forwardAgent = true;
+  };
+
   services.emacs.enable = true;
+
+  # GPG agent because SSH agent is not working: https://github.com/nix-community/home-manager/issues/4462
+  services.gpg-agent = {
+    enable = true;
+    enableSshSupport = true;
+  };
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
