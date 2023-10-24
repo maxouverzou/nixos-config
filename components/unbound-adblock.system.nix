@@ -10,8 +10,11 @@
         include = [
           "${pkgs.unbound-blocklist-stevenblack}"
         ];
-        interface = [ "127.0.0.1" ];
-        access-control = [ "127.0.0.0/8 allow" ];
+        interface = [ "0.0.0.0" ];
+        access-control = [
+          "127.0.0.0/8 allow"
+          "192.168.1.0/24 allow"
+        ];
       };
       forward-zone = [
         {
