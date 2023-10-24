@@ -57,6 +57,11 @@ in
     };
   };
 
+  programs.kitty = {
+    enable = true;
+    theme = "Solarized Dark";
+  };
+
   programs.swaylock = {
     enable = true;
     package = pkgs.swaylock-effects;
