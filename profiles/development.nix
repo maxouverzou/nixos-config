@@ -2,9 +2,14 @@
 
 {
   # container virtualization
-  virtualisation.docker.enable = true;
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    dockerSocket.enable = true;
+    autoPrune.enable = true;
+  };
 
   # hypervisor virtualization
-  virtualisation.virtualbox.host.enable = true;
+  virtualisation.libvirtd.enable = true;
 
 }
