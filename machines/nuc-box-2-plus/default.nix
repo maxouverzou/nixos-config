@@ -1,16 +1,12 @@
-{ config, pkgs, inputs, home-manager, ... }:
-
-{
+{ config, pkgs, inputs, ... }: let
+  nixos-hardware = inputs.nixos-hardware.nixosModules;
+in {
   imports =
     [
+      nixos-hardware.common-cpu-intel
+      nixos-hardware.common-pc
+      nixos-hardware.common-pc-ssd
       ./hardware-configuration.nix
-      ../../profiles/desktop.nix
-      ../../profiles/development.nix
-      ../../profiles/media-server.nix
-      ../../profiles/vscode-server.nix
-      ../../profiles/gaming.nix
-      ../../users/maxou
-      ../../users/milou
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -24,14 +20,6 @@
   hardware.bluetooth.enable = true;
 
   nixpkgs.config.allowUnfree = true;
-
-  networking = {
-    hostName = "kiosk";
-    domain = "local";
-
-    firewall.enable = false;
-    networkmanager.enable = true;
-  };
 
   system.stateVersion = "23.05";
 }
