@@ -12,6 +12,7 @@ in {
       ../../profiles/common.nix
       ../../components/avahi-server.system.nix
       ../../components/plex.system.nix
+      ../../components/unbound-adblock.system.nix
 
       ./containers/home-assistant.nix
       #./containers/home-bridge.nix
@@ -28,6 +29,26 @@ in {
     domain = "local";
 
     firewall.enable = false;
+
+    nameservers = [
+      "1.1.1.1"
+      "2606:4700:4700::1111"
+      "1.0.0.1"
+      "2606:4700:4700::1001"
+    ];
+
+    interfaces.enp1s0 = {
+      useDHCP = false;
+      ipv4.addresses = [{
+        address = "192.168.1.2";
+        prefixLength = 24;
+      }];
+    };
+
+    defaultGateway = {
+      address = "192.168.1.1";
+      interface = "enp1s0";
+    };
   };
 
   services.openssh = {
@@ -35,9 +56,6 @@ in {
     # TODO: remove this once setup is complete
     settings.PasswordAuthentication = true;
   };
-
-  # TODO: remove this once setup is complete
-  networking.networkmanager.enable = false;
 
   # container services config persistance
   environment.systemPackages = with pkgs; [
