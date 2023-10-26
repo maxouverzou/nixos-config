@@ -61,6 +61,9 @@ in
   programs.kitty = {
     enable = true;
     theme = "Solarized Dark";
+    extraConfig = ''
+      enable_audio_bell yes
+    '';
   };
 
   programs.swaylock = {
