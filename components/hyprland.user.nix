@@ -30,6 +30,7 @@ in
     wf-recorder
     ranger
     xdg-utils # clickable urls w/ kitty
+    brightnessctl
   ];
 
   programs.waybar = {
@@ -172,6 +173,21 @@ in
       exec-once = ${pkgs.mpvpaper}/bin/mpvpaper --mpv-options "no-audio loop-playlist shuffle panscan=1 input-ipc-server=${mpvpaperSocket}" '*' ~/Development/playground/python/apple-tv-screensavers/files/
 
       $mod = SUPER
+
+      binde=, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+      binde=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      bind=, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind=, XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+
+      binde=, XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-
+      binde=, XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set +5%
+
+      # XF86Display
+      # XF86WLAN # Works out w/o configuration on thinkpad 11e
+      # XF86Tools
+      # XF86Search
+      # XF86LaunchA
+      # XF86Explorer
 
       bind = $mod, Q, exec, [float;noanim] wlogout
       bind = $mod SHIFT, Q, exit
