@@ -91,6 +91,7 @@ in
     ]))
 
     # python3 # treemacs wants that
+    texlive.combined.scheme-medium # doomemacs / latex needs that
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
