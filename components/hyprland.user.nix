@@ -124,6 +124,10 @@ in
     };
   };
 
+  services.avizo = {
+    enable = true;
+  };
+
   services.swayidle = {
     enable = true;
     systemdTarget = "graphical-session.target";
@@ -174,13 +178,13 @@ in
 
       $mod = SUPER
 
-      binde=, XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
-      binde=, XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
-      bind=, XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-      bind=, XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
+      binde=, XF86AudioRaiseVolume, exec, volumectl +5% # wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+
+      binde=, XF86AudioLowerVolume, exec, volumectl -5% # wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+      bind=, XF86AudioMute, exec, volumectl toggle-mute # wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+      bind=, XF86AudioMicMute, exec, volumectl -m toggle-mute # wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
-      binde=, XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-
-      binde=, XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set +5%
+      binde=, XF86MonBrightnessDown, exec, lightctl -5% # ${pkgs.brightnessctl}/bin/brightnessctl set 5%-
+      binde=, XF86MonBrightnessUp, exec, lightctl +5% # ${pkgs.brightnessctl}/bin/brightnessctl set +5%
 
       # XF86Display
       # XF86WLAN # Works out w/o configuration on thinkpad 11e
