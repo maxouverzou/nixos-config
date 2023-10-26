@@ -60,6 +60,32 @@ rec {
         default = "DuckDuckGo";
         force = true;
         engines = {
+          "HomeManager Options" = {
+            urls = [{
+              template = "https://mipmip.github.io/home-manager-option-search/";
+              params = [
+                { name = "query"; value = "{searchTerms}"; }
+              ];
+
+            }];
+
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@ho" ];
+          };
+
+          "NixOS Options" = {
+            urls = [{
+              template = "https://search.nixos.org/options";
+              params = [
+                { name = "type"; value = "packages"; }
+                { name = "query"; value = "{searchTerms}"; }
+              ];
+            }];
+
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@no" ];
+          };
+
           "Nix Packages" = {
             urls = [{
               template = "https://search.nixos.org/packages";
