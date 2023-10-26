@@ -29,6 +29,7 @@ in
     wl-clipboard
     wf-recorder
     ranger
+    xdg-utils # clickable urls w/ kitty
   ];
 
   programs.waybar = {
