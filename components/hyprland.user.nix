@@ -31,6 +31,9 @@ in
     ranger
     xdg-utils # clickable urls w/ kitty
     brightnessctl
+
+    rofi-wayland
+    rofi-bluetooth
   ];
 
   programs.waybar = {
