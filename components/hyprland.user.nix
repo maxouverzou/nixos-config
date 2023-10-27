@@ -15,6 +15,23 @@ in
 
   # /nix/store/ckimsqb0hsqsgsidp5avmdgrs9p4q0l9-home-manager-path/share/hyprland/hyprland.conf
 
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome.gnome-themes-extra;
+    };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = {
+      name = "adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
+  };
+
   xdg = {
     enable = true;
     desktopEntries = {

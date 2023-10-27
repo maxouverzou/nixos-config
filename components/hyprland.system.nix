@@ -9,4 +9,6 @@
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
 
   hardware.opengl.enable = true;
+
+  programs.dconf.enable = true; # to configure gtk theme
 }
