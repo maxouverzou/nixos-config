@@ -20,9 +20,6 @@ rec {
         privacy-badger
         ublock-origin
 
-        reddit-enhancement-suite
-        old-reddit-redirect
-
         # user-agent switcher and manager?
       ];
 
