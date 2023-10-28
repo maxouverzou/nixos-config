@@ -50,6 +50,8 @@ in
     brightnessctl
 
     rofi-bluetooth
+
+    swaynotificationcenter
   ];
 
   programs.waybar = {
@@ -150,6 +152,22 @@ in
     };
   };
 
+  systemd.user.services.swaynotificationcenter = {
+    Unit = {
+      Description = "Simple notification daemon with a GUI built for Sway";
+      PartOf = [ "graphical-session.target" ];
+      After = [ "graphical-session.target" ];
+    };
+    Service = {
+      Type = "simple";
+      ExecStart = "${pkgs.swaynotificationcenter}/bin/swaync";
+      Restart = "always";
+    };
+    Install = {
+      WantedBy = [ "graphical-session.target" ];
+    };
+  };
+
   services.avizo = {
     enable = true;
   };
@@ -198,7 +216,7 @@ in
         disable_hyprland_logo = true
       }
 
-      exec-once = ${pkgs.mako}/bin/mako
+      # exec-once = ${pkgs.mako}/bin/mako
       # exec-once = ${pkgs.waybar}/bin/waybar
       exec-once = ${pkgs.mpvpaper}/bin/mpvpaper --mpv-options "no-audio loop-playlist shuffle panscan=1 input-ipc-server=${mpvpaperSocket}" '*' ~/Development/playground/python/apple-tv-screensavers/files/
 
@@ -223,6 +241,8 @@ in
       bind = $mod SHIFT, Q, exit
       bind = $mod SHIFT, C, killactive
       bind = $mod, R, exec, hyprctl reload
+
+      bind = $mod, T, exec, swaync-client --toggle-panel
 
       bind = $mod, Return, exec, ${pkgs.kitty}/bin/kitty fish
       bind = $mod SHIFT, Return, exec, ${pkgs.kitty}/bin/kitty fish --no-config
