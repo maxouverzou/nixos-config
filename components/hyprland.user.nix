@@ -49,7 +49,6 @@ in
     xdg-utils # clickable urls w/ kitty
     brightnessctl
 
-    rofi-wayland
     rofi-bluetooth
   ];
 
@@ -83,8 +82,15 @@ in
     enable = true;
     theme = "Solarized Dark";
     extraConfig = ''
-      enable_audio_bell yes
+      enable_audio_bell no
     '';
+  };
+
+  programs.rofi = {
+    enable = true;
+    package = pkgs.rofi-wayland;
+    theme = "solarized";
+    terminal = "${pkgs.kitty}/bin/kitty";
   };
 
   programs.swaylock = {
