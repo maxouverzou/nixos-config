@@ -8,6 +8,7 @@
 
   imports =
     [
+      ../../components/applications.user.nix
       ../../components/hyprland.user.nix
       ../../components/vscode.user
       ../../components/firefox.user.nix
