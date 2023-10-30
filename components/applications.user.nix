@@ -1,4 +1,6 @@
 {
+  # TODO: refactor/update
+
   config = {
     # Associations
     xdg.mimeApps = {
@@ -8,7 +10,7 @@
         "application/zip" = "org.gnome.FileRoller.desktop";
 
         # Document
-        "application/pdf" = "org.gnome.Evince.desktop";
+        "application/pdf" = "firefox.desktop";
         "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = "writer.desktop";
 
         # Image
@@ -41,6 +43,7 @@
 
     # Modules
     programs.jq.enable = true;
+
     programs.ssh = {
       enable = true;
       includes = [ "config.d/*" ];
@@ -49,5 +52,5 @@
         PreferredAuthentications = "publickey";
       };
     };
-
-  }
+  };
+}
