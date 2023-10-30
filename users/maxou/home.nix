@@ -7,6 +7,11 @@
 let
   inherit (lib.generators) toKeyValue;
   # hyprland = inputs.hyprland;
+  tex = (pkgs.texlive.combine {
+    inherit (pkgs.texlive) scheme-medium
+    moderncv fontawesome5 academicons multirow arydshln # moderncv & dependencies
+      ;
+  });
 in
 {
 
@@ -91,7 +96,8 @@ in
     ]))
 
     # python3 # treemacs wants that
-    texlive.combined.scheme-medium # doomemacs / latex needs that
+    # texlive.combined.scheme-medium # doomemacs / latex needs that
+    tex
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
