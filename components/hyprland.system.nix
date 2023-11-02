@@ -11,4 +11,6 @@
   hardware.opengl.enable = true;
 
   programs.dconf.enable = true; # to configure gtk theme
+
+  services.udisks2.enable = true;
 }
