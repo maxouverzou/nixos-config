@@ -38,6 +38,7 @@
 
   environment.systemPackages = with pkgs; [
     bc
+    btop
     curl
     file
     git
