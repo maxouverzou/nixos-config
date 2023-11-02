@@ -37,15 +37,31 @@ https://www.reddit.com/r/NixOS/comments/fsummx/how_to_list_all_installed_package
 - udisk
 - configure waybar
   - hyprland/workaces: Unknown module
-- wayland options
-- osd: avizo
-- networkmanager_dmenu
-- SwayNotificationCenter
+- wayland options: wdisplays
+- rofi
+  - networkmanager_dmenu
+  - bluetooth
+  - configuration menu
+  - tools
+  - execute through hyprland exec (hyprland dispatch exec kitty)
+  - 1password?
 - hyprland layouts & shortcuts
   - https://github.com/hyprwm/Hyprland/blob/main/example/hyprland.conf
   - https://github.com/alexjercan/hyprland.dotfiles/blob/master/hypr/hyprland.conf
 - https://github.com/loserMcloser/waylogout
 - https://github.com/swaywm/sway/wiki/Useful-add-ons-for-sway
+- rofi tools: https://github.com/davatorium/rofi-scripts/blob/master/tmux_session.sh
+- attic / binary cache: https://haseebmajid.dev/posts/2023-10-08-how-to-create-systemd-services-in-nix-home-manager/
+- distrobox
+- leverage suspend/hibernate in logout menu / lock screen
+- emacs: terminal
+- power on after power failure
+- https://github.com/antonmedv/walk
+
+- kiosk DE: KDE, Gnome, DDE, Pantheon, Cosmic?
+
+# skynet
+RPI / tailscale / hostapd
 
 # RPI imager
 https://github.com/nix-community/nixos-generators
