@@ -90,6 +90,15 @@
             ./hosts/gertry-3000
           ];
         };
+	
+	glados = lib.nixosSystem {
+	  specialArgs = { inherit inputs outputs; };
+
+          modules = [
+ 	    ./machines/framework-7040-amd
+            ./hosts/glados
+	  ];
+	};
 
       };
 
