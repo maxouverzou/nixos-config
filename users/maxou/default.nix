@@ -32,6 +32,7 @@ rec {
     openssh.authorizedKeys.keys = [
       (lib.readFile ../../resources/users/maxou/kiosk.pub)
       (lib.readFile ../../resources/users/maxou/wheathley.pub)
+      (lib.readFile ../../resources/users/maxou/glados.pub)
     ];
   };
 
