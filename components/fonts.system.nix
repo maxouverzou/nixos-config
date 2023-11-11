@@ -6,16 +6,27 @@
     fontDir.enable = true;
 
     fonts = with pkgs; [
+      # TODO filter?
+      noto-fonts
+      noto-fonts-emoji
+      twitter-color-emoji
+      twemoji-color-font
+
+      # picked as best for code
       fira-code
       fira-mono
+      fira
+      # wine compat fonts
       liberation_ttf
       libertine
       open-sans
-      oxygenfonts
-      source-code-pro
-      twemoji-color-font
-      powerline
-      font-awesome
+
+      oxygenfonts # ?
+
+      source-code-pro # best for code, legacy
+
+      powerline # duh
+      font-awesome # waybar, etc
     ];
 
     fontconfig = {
