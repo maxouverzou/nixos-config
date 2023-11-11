@@ -37,38 +37,47 @@
   networking.dhcpcd.runHook = "${pkgs.utillinux}/bin/agetty --reload";
 
   environment.systemPackages = with pkgs; [
+    git
+    vim
+    # utils
     bc
-    btop
     curl
     file
-    git
-    iftop
-    iotop
-    jq
-    lsof
-    pciutils
-    moreutils
-    multitail
+    jq # TODO move to userland
+    mc
+    ranger
+    screen # TODO move to userland
     pv
-    dig
-    rlwrap
-    s-tui
+    rlwwrap
     tealdeer
     tree
     unzip
-    vim
     wget
     whois
     xxd
+    moreutils
+    multitail
+    dig
+    rlwrap
     xz
-    yq
+    yq # TODO move to userland
     zip
-    screen
 
-    mc
-    ranger
+    acpi # tmux-battery
 
-    acpi # for tmux-battery
+    # monitoring
+    lsof
+    btop
+    iftop
+    iotop
+    s-tui
+
+    # setup
+    pciutils
+    lsbutils
+    dmidecode
+    lshw
+    usbutils
   ];
 
   programs.htop = {
