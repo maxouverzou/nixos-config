@@ -6,7 +6,10 @@
 
   services.blueman.enable = config.hardware.bluetooth.enable;
 
-  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal-hyprland
+  ];
 
   hardware.opengl.enable = true;
 
