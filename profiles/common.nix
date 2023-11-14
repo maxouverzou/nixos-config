@@ -48,7 +48,7 @@
     ranger
     screen # TODO move to userland
     pv
-    rlwwrap
+    rlwrap
     tealdeer
     tree
     unzip
@@ -74,7 +74,6 @@
 
     # setup
     pciutils
-    lsbutils
     dmidecode
     lshw
     usbutils
