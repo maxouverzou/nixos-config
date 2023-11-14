@@ -41,8 +41,7 @@ rec {
       nix-doom-emacs.hmModule
       ./home.nix
     ]
-    # TODO: hic sunt dracones: using greetd to detect graphical systems
-    ++ (optional config.services.greetd.enable ./home-graphical.nix);
+    ++ (optional config.services.xserver.enable ./home-graphical.nix);
   };
 
 }

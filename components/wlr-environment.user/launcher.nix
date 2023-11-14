@@ -1,5 +1,7 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
+    rofi-pulse-select # sink / source
+    rofimoji
     rofi-bluetooth
     wdisplays
   ];

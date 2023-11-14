@@ -8,8 +8,6 @@
     ./osd.nix
     ./screenlock.nix
     ./status-bar.nix
-    ./terminal.nix
-    ./theme.nix
     ./wallpaper.nix
   ];
 }

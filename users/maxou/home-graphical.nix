@@ -8,8 +8,10 @@
 
   imports =
     [
+      ./gnome.nix
       ../../components/applications.user.nix
-      ../../components/hyprland.user.nix
+      # ../../components/hyprland.user.nix
+      ../../components/terminal.user.nix
       ../../components/vscode.user
       ../../components/firefox.user.nix
     ];
