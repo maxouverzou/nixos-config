@@ -86,7 +86,6 @@ in
   home.packages = with pkgs; [
     awscli2
     tile-stitch
-    icloud-drive-fuse
 
     beancount
     fava

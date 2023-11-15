@@ -41,7 +41,9 @@ rec {
       nix-doom-emacs.hmModule
       ./home.nix
     ]
-    ++ (optional config.services.xserver.enable ./home-graphical.nix);
+    ++ (optional config.services.xserver.enable ./home-graphical.nix)
+    ++ (optional config.services.xserver.desktopManager.gnome.enable ./gnome)
+    ;
   };
 
 }
