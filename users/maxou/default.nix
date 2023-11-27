@@ -2,6 +2,7 @@
 let
   inherit (lib) mkDefault optional optionals;
   nix-doom-emacs = inputs.nix-doom-emacs;
+  plasma-manager = inputs.plasma-manager;
 in
 rec {
   users.extraUsers.maxou = {
@@ -39,10 +40,12 @@ rec {
   home-manager.users.maxou = {
     imports = [
       nix-doom-emacs.hmModule
+      plasma-manager.homeManagerModules.plasma-manager
       ./home.nix
     ]
     ++ (optional config.services.xserver.enable ./home-graphical.nix)
     ++ (optional config.services.xserver.desktopManager.gnome.enable ./gnome)
+    ++ (optional config.services.xserver.desktopManager.plasma5.enable ./kde)
     ;
   };
 

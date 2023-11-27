@@ -1,5 +1,7 @@
 { pkgs, lib, ...}: {
   home.packages = with pkgs; [
+    libreoffice
+
     gnome.dconf-editor
     dconf2nix
 
