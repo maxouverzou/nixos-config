@@ -10,7 +10,8 @@
       # ../components/greetd.system.nix
       # ../components/kde5.system.nix
       # ../components/hyprland.system.nix
-      ../components/gnome.system.nix
+      # ../components/gnome.system.nix
+      ../components/kde5.system.nix
     ];
 
   # boot splash instead of log messages
@@ -20,8 +21,13 @@
   services.flatpak.enable = true;
   xdg.portal.enable = true;
 
-  services.hardware.bolt.enable = lib.mkDefault true;
+  services.hardware.bolt.enable = lib.mkDefault true; # TODO: kde needs this?
 
+  programs.dconf.enable = true;
+
+  programs._1password-gui = {
+    enable = true;
+    polkitPolicyOwners = [ "maxou" ];
+  };
   programs._1password.enable = true;
-  programs._1password-gui.enable = true;
 }

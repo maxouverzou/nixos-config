@@ -1,24 +1,28 @@
-{
-  config,
-  inputs,
-  lib,
-  pkgs,
-  ...
-}: let
+{ config
+, inputs
+, lib
+, pkgs
+, ...
+}:
+let
   nix4vscode-extensions = (import ./extensions.nix) { pkgs = pkgs; lib = lib; };
 
   universal-extensions = with inputs.nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace; [
     arrterian.nix-env-selector
     jnoortheen.nix-ide
     sanaajani.taskrunnercode
-    ms-vsliveshare.vsliveshare
-    devicescript.devicescript-vscode
+    # ms-vsliveshare.vsliveshare
+    # devicescript.devicescript-vscode
     vscode-org-mode.org-mode
   ];
 
-in {
+in
+{
   home.packages = with pkgs; [
     black
+    nixpkgs-fmt
+    nodePackages_latest.prettier
+    nodejs_20
   ];
 
   home.sessionVariables = {
@@ -29,9 +33,9 @@ in {
     enable = true;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    
-    package = pkgs.vscodium;
-    
+
+    package = pkgs.vscode;
+
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-marketplace; [
       nix4vscode-extensions.ms-python.python
@@ -45,17 +49,31 @@ in {
       nix4vscode-extensions.tamasfe.even-better-toml
     ] ++ universal-extensions;
 
-    
-    userSettings = {
-      "python.formatting.blackPath" = "${pkgs.black}/bin/black";
 
-      "editor.fontFamily" = ["'Fira Code'" "'Droid Sans Mono'" "'monospace'" "monospace"];
+    userSettings = {
+      "editor.fontFamily" = [
+        "'Fira Code'"
+        "'Droid Sans Mono'"
+        "'monospace'"
+        "monospace"
+      ];
       "files.autoSave" = "off";
       "[nix]"."editor.tabSize" = 2;
-      "[typescript]"."editor.defaultFormatter" = "esbenp.prettier-vscode";
-      "[typescript]"."editor.formatOnSave" = true;
-      "[typescript]"."editor.codeActionsOnSave" = {
-        "source.fixAll.eslint" = true;
+      "[typescript]" = {
+        "typescript.updateImportsOnFileMove.enabled" = "always";
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "editor.formatOnSave" = true;
+        "editor.codeActionsOnSave" = {
+          "source.fixAll.eslint" = true;
+        };
+      };
+      "[javascript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "updateImportsOnFileMove.enabled" = "always";
+      };
+      "[python]" = {
+        "formatting.provider" = "black";
+        "formatting.blackPath" = "${pkgs.black}/bin/black";
       };
       "yaml.customTags" = [
         "!Ref scalar"
@@ -65,7 +83,6 @@ in {
         "!GetAtt scalar"
         "!Sub scalar"
       ];
-      "python.formatting.provider" = "black";
       "gitlens.plusFeatures.enabled" = false;
       "files.exclude" = {
         "**/.git" = true;
@@ -73,20 +90,21 @@ in {
           when = "$(basename).ts";
         };
       };
-      # "typescript.tsdk" = "node_modules/typescript/lib";
       "task.allowAutomaticTasks" = "on";
-      "editor.rulers" = [80 100];
+      "editor.rulers" = [ 80 100 ];
       "terminal.integrated.profiles.linux" = {
         "Nix Shell" = {
           "path" = "fish";
           "args" = [
-            "-i" "-c" "nix-shell"
+            "-i"
+            "-c"
+            "nix-shell"
           ];
           "icon" = "terminal-linux";
         };
       };
       "terminal.integrated.defaultProfile.linux" = "Nix Shell";
-      "typescript.updateImportsOnFileMove.enabled" = "always";
+      "explorer.confirmDragAndDrop" = false;
     };
 
   };

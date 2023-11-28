@@ -14,6 +14,12 @@
     bottles
     discord
     geekbench
+
+    # nvtop
+    # radeaontop
+    #
+    # glxinfo
+    # vulkan tools
   ];
 
 }

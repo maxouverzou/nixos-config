@@ -8,7 +8,6 @@
 
   imports =
     [
-      ../../components/theme.user.nix
       ../../components/applications.user.nix
       # ../../components/hyprland.user.nix
       ../../components/terminal.user.nix
@@ -23,8 +22,12 @@
 
     openscad	
     qgis-ltr
+    yt-dlp
+    meld
+    vlc
+    cider
+    kitty
 
-    libreoffice
     hunspell
     hunspellDicts.en_US
     hunspellDicts.fr-reforme1990
