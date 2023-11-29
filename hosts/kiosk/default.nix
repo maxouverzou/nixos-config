@@ -1,13 +1,12 @@
-{ config, lib, pkgs, ... }:
-
+{ self, config, lib, pkgs, ... }:
+let
+  test = config.people.activeUsers;
+in
 {
   imports = [
-    ../../profiles/desktop.nix
-    ../../profiles/development.nix
-    ../../profiles/vscode-server.nix
-    ../../profiles/gaming.nix
-    ../../users/maxou
-    ../../users/milou
+    ../../nixos/graphical/kde.nix
+    # ../../profiles/development.nix
+    # ../../profiles/vscode-server.nix
   ];
 
   networking = {

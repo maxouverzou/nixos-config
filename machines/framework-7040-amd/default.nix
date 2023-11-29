@@ -1,12 +1,12 @@
-{
-  lib
+{ lib
 , config
-, pkgs
-, inputs
+, flake
 , ...
-}: let
-  nixos-hardware = inputs.nixos-hardware.nixosModules;
-in {
+}:
+let
+  nixos-hardware = flake.inputs.nixos-hardware.nixosModules;
+in
+{
   imports =
     [
       nixos-hardware.framework-13-7040-amd
@@ -25,8 +25,6 @@ in {
   fileSystems."/boot".options = [ "noatime" "discard" ];
 
   hardware.bluetooth.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "23.05";
 }

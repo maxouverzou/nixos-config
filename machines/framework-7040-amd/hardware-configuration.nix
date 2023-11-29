@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
@@ -15,21 +16,23 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c864eff2-2fc0-4da1-b786-09239d7d9f92";
+    {
+      device = "/dev/disk/by-uuid/c864eff2-2fc0-4da1-b786-09239d7d9f92";
       fsType = "ext4";
     };
 
   boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/012b4ef5-4005-42f1-b9f0-f1be7d926d6f";
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/8469-4F97";
+    {
+      device = "/dev/disk/by-uuid/8469-4F97";
       fsType = "vfat";
     };
 
   swapDevices = [
     {
       device = "/swapfile";
-      size = 64*1024;
+      size = 64 * 1024;
     }
   ];
   boot.resumeDevice = "/dev/disk/by-label/nixos";

@@ -1,13 +1,13 @@
-{ pkgs, ... }: {
+{ self, ... }: {
   imports =
     [
-      ../../profiles/desktop.nix
-      ../../profiles/development.nix
-      ../../profiles/laptop.nix
-      ../../profiles/gaming.nix
-
-      ../../components/syncthing.system.nix
-      ../../users/maxou
+      ../../nixos/dns-over-https.nix
+      ../../nixos/graphical/kde.nix
+      ../../nixos/graphical/gaming.nix
+      ../../nixos/tailscale.nix
+      # ../../profiles/development.nix
+      # ../../profiles/laptop.nix
+      # ../../components/syncthing.system.nix
     ];
 
   networking = {

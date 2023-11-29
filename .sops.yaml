@@ -1,0 +1,9 @@
+keys:
+  - &host_glados age1q2gfvmxktwjtstxdwr09zmwc6neu9p7jru4raavspq24pz49e5yqn0s4s7
+  - &user_maxou age1jr3gem7347ft5pw36g7q80l2rax8kyyhmelka8dzx7uj3ce5mulq2qhd7s
+creation_rules:
+  - path_regex: secrets/[^/]*\.yaml
+    key_groups:
+    - age:
+      - *user_maxou
+      - *host_glados

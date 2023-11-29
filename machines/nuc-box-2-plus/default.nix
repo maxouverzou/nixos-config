@@ -1,6 +1,11 @@
-{ config, pkgs, inputs, ... }: let
-  nixos-hardware = inputs.nixos-hardware.nixosModules;
-in {
+{ config
+, flake
+, ...
+}:
+let
+  nixos-hardware = flake.inputs.nixos-hardware.nixosModules;
+in
+{
   imports =
     [
       nixos-hardware.common-cpu-intel
@@ -18,8 +23,6 @@ in {
 
   hardware.cpu.intel.updateMicrocode = true;
   hardware.bluetooth.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "23.05";
 }

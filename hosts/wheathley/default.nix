@@ -1,11 +1,10 @@
 { pkgs, ... }: {
   imports =
     [
-      ../../profiles/desktop.nix
-      ../../profiles/development.nix
-      ../../profiles/laptop.nix
-      ../../components/syncthing.system.nix
-      ../../users/maxou
+      # ../../profiles/desktop.nix
+      # ../../profiles/development.nix
+      # ../../profiles/laptop.nix
+      # ../../components/syncthing.system.nix
     ];
 
   networking = {

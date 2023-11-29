@@ -1,27 +1,22 @@
-{ pkgs, modulesPath, ... }: let
+{ pkgs, modulesPath, ... }:
+let
   container-services = [
     "podman-homebridge.service"
     "podman-homeassistant.service"
     "podman-pihole.service"
   ];
-in {
+in
+{
   imports =
     [
       (modulesPath + "/profiles/headless.nix")
-      (modulesPath + "/profiles/minimal.nix")
-      ../../profiles/common.nix
-      ../../components/avahi-server.system.nix
-      ../../components/plex.system.nix
-      ../../components/unbound-adblock.system.nix
+      # (modulesPath + "/profiles/minimal.nix") # TODO pulls gtk3/xorg
+      
+      ../../nixos/plex.nix
 
+      ./bin-pool.nix
       ./containers/home-assistant.nix
-      #./containers/home-bridge.nix
-      #./containers/pihole.nix
-      #./services/home-assistant.nix
-      #./services/iot-router.nix
       ./services/tailscale.nix
-
-      ../../users/maxou
     ];
 
   networking = {
