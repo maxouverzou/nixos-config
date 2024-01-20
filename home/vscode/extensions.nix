@@ -116,5 +116,12 @@ in
     sha256 = "0gx2w0z4ibr46g4yqllqmyff779r272pd73ajxh55n8lpk8snx3g";
   };
 
+  "gleam"."gleam" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "gleam";
+    publisher = "gleam";
+    version = "2.5.1";
+    sha256 = "19w84zyapfj6ha0gzffmbsbnl575aqbsfhpvvwchkxzqx8jlh0j5";
+  };
+
 }
 

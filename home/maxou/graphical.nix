@@ -5,6 +5,6 @@
     vlc
     yt-dlp
     
-    qgis-ltr
+    # qgis-ltr # @FIXME broken
   ];
 }
