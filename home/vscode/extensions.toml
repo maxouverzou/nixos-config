@@ -71,3 +71,7 @@ extension_name = "jupyter"
 [[extensions]]
 publisher_name = "Gleam"
 extension_name = "gleam"
+
+[[extensions]]
+publisher_name = "JakeBecker"
+extension_name = "elixir-ls"

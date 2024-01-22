@@ -7,8 +7,8 @@ in
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
     publisher = "ms-python";
-    version = "2023.25.10171013";
-    sha256 = "09bkqg290wxm9pdv41b9bq27km9cqzg10wkxvhpz32hj0wc4h5ps";
+    version = "2023.25.10221012";
+    sha256 = "14bkvlflib4wky6lw1hq0i01ymzf5349cl4d9minaam2lq0451i0";
   };
 
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
@@ -35,22 +35,22 @@ in
   "dbaeumer"."vscode-eslint" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-eslint";
     publisher = "dbaeumer";
-    version = "2.4.3";
-    sha256 = "15i8ra8wjr3k5n0d5ji6spn8jxg34aikpn86p8gl6l5czxm78dv4";
+    version = "2.4.4";
+    sha256 = "1c10n36a3bxwwjgd4vhrf79wg14dm0hxvz9z23pqdyxzcwrar49l";
   };
 
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.1.1704";
-    sha256 = "0dv3hhhs9pahf11b8rfxl3na14ghyc715a9ri6xm5xhhsxmv7p31";
+    version = "2024.1.1904";
+    sha256 = "1vy5q7akrnxs3q4vhq1njbsbi8kysszl5yhpkns1q3z0kin6bw93";
   };
 
   "ms-python"."isort" = vscode-utils.extensionFromVscodeMarketplace {
     name = "isort";
     publisher = "ms-python";
-    version = "2023.11.13191009";
-    sha256 = "03kji3kz4z6rqfy97zh76r3l5h6jnnmhhr6vf8hc688qd7gxpnwb";
+    version = "2023.13.10191006";
+    sha256 = "168yrvj0cj406g2sf9zj6lx5xfkipnd74c510mwjvf8j8zv601qy";
   };
 
   "ms-vsliveshare"."vsliveshare" = vscode-utils.extensionFromVscodeMarketplace {
@@ -72,6 +72,13 @@ in
     publisher = "tamasfe";
     version = "0.19.2";
     sha256 = "0q9z98i446cc8bw1h1mvrddn3dnpnm2gwmzwv2s3fxdni2ggma14";
+  };
+
+  "jakebecker"."elixir-ls" = vscode-utils.extensionFromVscodeMarketplace {
+    name = "elixir-ls";
+    publisher = "jakebecker";
+    version = "0.19.0";
+    sha256 = "1rnwl8x7qjbn8zaqgs0x9pnnnamkv449i5an60vlcl4m2ff9wmyz";
   };
 
   "coolbear"."systemd-unit-file" = vscode-utils.extensionFromVscodeMarketplace {
@@ -122,6 +129,5 @@ in
     version = "2.5.1";
     sha256 = "19w84zyapfj6ha0gzffmbsbnl575aqbsfhpvvwchkxzqx8jlh0j5";
   };
-
 }
 

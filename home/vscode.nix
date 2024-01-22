@@ -9,6 +9,7 @@ let
 in
 {
   home.packages = with pkgs; [
+    elixir
     black
     nixpkgs-fmt
     nodePackages_latest.prettier
@@ -39,6 +40,7 @@ in
       nix4vscode-extensions.vscode-org-mode.org-mode
       # nix4vscode-extensions.ms-toolsai.jupyter # hash mismatch
       nix4vscode-extensions.gleam.gleam
+      nix4vscode-extensions.jakebecker.elixir-ls
     ];
 
 
