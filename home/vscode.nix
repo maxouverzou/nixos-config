@@ -45,16 +45,18 @@ in
 
 
     userSettings = {
-      "editor.fontFamily" = [
+      "editor.fontFamily" = "'Fira Code'";
+      /* [
         "'Fira Code'"
         "'Droid Sans Mono'"
         "'monospace'"
         "monospace"
-      ];
+      ]; */
       "files.autoSave" = "off";
       "[nix]"."editor.tabSize" = 2;
+      # "[nix]"
       "[typescript]" = {
-        "typescript.updateImportsOnFileMove.enabled" = "always";
+        "updateImportsOnFileMove.enabled" = "always";
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "editor.formatOnSave" = true;
         "editor.codeActionsOnSave" = {
