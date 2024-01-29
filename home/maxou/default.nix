@@ -1,5 +1,9 @@
 {pkgs, ...}: {
-  imports = [ ./secrets.nix ];
+  imports = [
+    ../syncthing.nix
+    ./secrets.nix
+    # ../emacs.nix # hangs on: inhinting kill emacs
+  ];
 
   home.packages = with pkgs; [
     awscli2

@@ -43,13 +43,10 @@
 
       maxou-linux.imports = [
         ./maxou
-        # ./emacs.nix # hangs on: inhinting kill emacs
-        ./syncthing.nix
+
       ];
       maxou-linux-graphical.imports = [
-        # ./emacs-graphical.nix # hangs on: inhinting kill emacs
         ./maxou/graphical.nix
-        ./3d-printing.nix
       ];
 
       milou-linux.imports = [
