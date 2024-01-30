@@ -7,15 +7,15 @@ in
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
     publisher = "ms-python";
-    version = "2023.25.10221012";
-    sha256 = "14bkvlflib4wky6lw1hq0i01ymzf5349cl4d9minaam2lq0451i0";
+    version = "2023.25.10292213";
+    sha256 = "09r82h3px2nlkyd3h5y8p6xcz9pccayvfnrnymlkiy9n2j2889sy";
   };
 
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2023.12.103";
-    sha256 = "1lkh94vyx9k23yw7i6sl1yy5f5wf3kjm8c5ljybzvy1lbi831lyf";
+    version = "2024.1.102";
+    sha256 = "05wikxrc7bw2m71gp2n4myfqdk7gk8y474v2fhg0qrxz5hafkyx6";
   };
 
   "ms-toolsai"."jupyter" = vscode-utils.extensionFromVscodeMarketplace {
@@ -42,15 +42,15 @@ in
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.1.1904";
-    sha256 = "1vy5q7akrnxs3q4vhq1njbsbi8kysszl5yhpkns1q3z0kin6bw93";
+    version = "2024.1.3004";
+    sha256 = "17ddc3zf6rmczfxf681ds42gbvbgg2mvlfwbw8ij748wd46gmbc5";
   };
 
   "ms-python"."isort" = vscode-utils.extensionFromVscodeMarketplace {
     name = "isort";
     publisher = "ms-python";
-    version = "2023.13.10191006";
-    sha256 = "168yrvj0cj406g2sf9zj6lx5xfkipnd74c510mwjvf8j8zv601qy";
+    version = "2023.13.10231012";
+    sha256 = "1c8s02b89ixzmi1h4n97c7x8vl9wssxckyxml3aqgjbxn7kw8902";
   };
 
   "ms-vsliveshare"."vsliveshare" = vscode-utils.extensionFromVscodeMarketplace {
