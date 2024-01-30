@@ -1,7 +1,7 @@
 {pkgs, ...}: { 
   imports = [
     ../3d-printing.nix
-    # ../emacs-graphical.nix # hangs on: inhinting kill emacs
+    ../emacs-graphical.nix
   ];
 
   home.packages = with pkgs; [

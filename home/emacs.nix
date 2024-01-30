@@ -8,7 +8,7 @@
   programs.doom-emacs = {
     enable = true;
     doomPrivateDir = ./emacs/doom;
-    emacsPackage = lib.mkDefault pkgs.emacs-nox;
+    emacsPackage = lib.mkDefault pkgs.emacs28-nox;
     emacsPackagesOverlay = self: super: {
       beancount = self.trivialBuild {
         pname = "beancount";

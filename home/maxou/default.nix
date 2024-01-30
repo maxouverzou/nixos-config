@@ -2,7 +2,7 @@
   imports = [
     ../syncthing.nix
     ./secrets.nix
-    # ../emacs.nix # hangs on: inhinting kill emacs
+    ../emacs.nix
   ];
 
   home.packages = with pkgs; [

@@ -3,6 +3,5 @@
     ./emacs.nix
   ];
   
-  # hangs on: inhinting kill emacs
-  programs.doom-emacs.emacsPackage = lib.mkForce pkgs.emacs;
+  programs.doom-emacs.emacsPackage = lib.mkForce pkgs.emacs28;
 }
