@@ -2,6 +2,7 @@
   imports = [
     ../3d-printing.nix
     ../emacs-graphical.nix
+    # ../gis.nix # pdal build failure (xml error)
   ];
 
   home.packages = with pkgs; [
@@ -9,7 +10,5 @@
     mpv
     vlc
     yt-dlp
-    
-    # qgis-ltr # @FIXME broken
   ];
 }
