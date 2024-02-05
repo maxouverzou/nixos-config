@@ -12,6 +12,7 @@ in
   fuckport = super.callPackage ../custom/fuckport.nix { };
   git-diff-image = super.callPackage ../custom/git-diff-image.nix { };
   gpx-reduce = super.callPackage ../custom/gpx-reduce.nix { };
+  headsetcontrol-udev = super.callPackage ../custom/headsetcontrol-udev.nix { };
   hyprshot = super.callPackage ../custom/hyprshot.nix { };
   icloud-drive-fuse = super.callPackage ../custom/icloud-drive-fuse.nix { };
   redis-cli = super.callPackage ../custom/redis-cli.nix { };

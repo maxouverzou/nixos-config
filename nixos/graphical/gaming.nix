@@ -23,4 +23,5 @@
     # vulkan tools
   ];
 
+  services.udev.packages = with pkgs; [ headsetcontrol-udev ];
 }
