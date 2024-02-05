@@ -78,3 +78,7 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+(setq me/doom-font-size 18)
+(setq doom-font (font-spec :family "Fira Code" :size me/doom-font-size))
+(setq doom-unicode-font (font-spec :family "Fira Mono" :size me/doom-font-size))
+(setq doom-variable-pitch-font (font-spec :family "Fira Sans" :size me/doom-font-size))
