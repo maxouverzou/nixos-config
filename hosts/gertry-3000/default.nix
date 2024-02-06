@@ -11,7 +11,7 @@ in
     [
       (modulesPath + "/profiles/headless.nix")
       # (modulesPath + "/profiles/minimal.nix") # TODO pulls gtk3/xorg
-      
+
       ../../nixos/plex.nix
 
       ./bin-pool.nix

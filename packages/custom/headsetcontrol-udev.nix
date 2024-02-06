@@ -1,5 +1,4 @@
-{
-  writeTextFile
+{ writeTextFile
 , ...
 }: writeTextFile {
   # generated from `headsetcontrol -u`
@@ -100,6 +99,6 @@
     KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03f0", ATTRS{idProduct}=="098d", TAG+="uaccess"
 
     LABEL="headset_end"
-    '';
-     destination = "/etc/udev/rules.d/90-headsetcontrol.rules";
+  '';
+  destination = "/etc/udev/rules.d/90-headsetcontrol.rules";
 }
