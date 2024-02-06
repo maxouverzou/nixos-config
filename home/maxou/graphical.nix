@@ -2,7 +2,7 @@
   imports = [
     ../3d-printing.nix
     ../emacs-graphical.nix
-    # ../gis.nix # pdal build failure (xml error)
+    ../gis.nix
   ];
 
   home.packages = with pkgs; [

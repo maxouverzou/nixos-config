@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    qgis-ltr
     gpx-reduce
+    # qgis-ltr # pdal build failure (xml error)
     tile-stitch
   ];
 }
