@@ -11,5 +11,6 @@
     mpv
     vlc
     yt-dlp
+    zoom-us
   ];
 }
