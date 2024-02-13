@@ -1,4 +1,4 @@
-vscode_version = "1.85.1"
+vscode_version = "1.86.1"
 
 [[extensions]]
 publisher_name = "ms-python"

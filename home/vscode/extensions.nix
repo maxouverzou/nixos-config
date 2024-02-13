@@ -7,22 +7,22 @@ in
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
     publisher = "ms-python";
-    version = "2023.25.10292213";
-    sha256 = "09r82h3px2nlkyd3h5y8p6xcz9pccayvfnrnymlkiy9n2j2889sy";
+    version = "2024.1.10431006";
+    sha256 = "0zb7brbrr2asn6jdb7vqzyhhc8pdai8j1lpc90x4q6pzd8z26c5p";
   };
 
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.1.102";
-    sha256 = "05wikxrc7bw2m71gp2n4myfqdk7gk8y474v2fhg0qrxz5hafkyx6";
+    version = "2024.2.1";
+    sha256 = "1a5d6gdavbb3m9p68201vn5bd5q7j8q8gv4s4459d2qzllvz2mr2";
   };
 
   "ms-toolsai"."jupyter" = vscode-utils.extensionFromVscodeMarketplace {
     name = "jupyter";
     publisher = "ms-toolsai";
-    version = "2023.11.1100101639";
-    sha256 = "15d0s6y8y6sv9qkbr8gsry0d2l7km8j3r872mgra7ngj0anlb2zj";
+    version = "2024.1.2024012502";
+    sha256 = "11dq86kxm3yqyykrv7xnq8nfim0jx16ni6hj75chbhsynvdjkb8x";
   };
 
   "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
@@ -42,8 +42,8 @@ in
   "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
     name = "gitlens";
     publisher = "eamodio";
-    version = "2024.1.3004";
-    sha256 = "17ddc3zf6rmczfxf681ds42gbvbgg2mvlfwbw8ij748wd46gmbc5";
+    version = "2024.2.1104";
+    sha256 = "1m1zcmxdmc650184b0iv0nsxvahl622b0mp8n7dgalxjmgjl58r9";
   };
 
   "ms-python"."isort" = vscode-utils.extensionFromVscodeMarketplace {
@@ -119,8 +119,8 @@ in
   "arrterian"."nix-env-selector" = vscode-utils.extensionFromVscodeMarketplace {
     name = "nix-env-selector";
     publisher = "arrterian";
-    version = "1.0.10";
-    sha256 = "0gx2w0z4ibr46g4yqllqmyff779r272pd73ajxh55n8lpk8snx3g";
+    version = "1.0.11";
+    sha256 = "113zx78c3219knw4qa04242404n32vnk9rb6a3ynz41dgwh1mbbl";
   };
 
   "gleam"."gleam" = vscode-utils.extensionFromVscodeMarketplace {
