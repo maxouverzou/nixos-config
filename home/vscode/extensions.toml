@@ -1,4 +1,4 @@
-vscode_version = "1.86.1"
+vscode_version = "1.86.2"
 
 [[extensions]]
 publisher_name = "ms-python"
@@ -75,3 +75,7 @@ extension_name = "gleam"
 [[extensions]]
 publisher_name = "JakeBecker"
 extension_name = "elixir-ls"
+
+[[extensions]]
+publisher_name = "GitHub"
+extension_name = "vscode-github-actions"

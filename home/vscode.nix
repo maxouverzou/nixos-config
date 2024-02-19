@@ -41,6 +41,7 @@ in
       # nix4vscode-extensions.ms-toolsai.jupyter # hash mismatch
       nix4vscode-extensions.gleam.gleam
       nix4vscode-extensions.jakebecker.elixir-ls
+      nix4vscode-extensions.github.vscode-github-actions
     ];
 
 
