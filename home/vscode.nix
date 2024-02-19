@@ -24,26 +24,8 @@ in
     package = pkgs.vscode;
 
     mutableExtensionsDir = false;
-    extensions = with pkgs.vscode-marketplace; [
-      nix4vscode-extensions.ms-python.python
-      nix4vscode-extensions.ms-python.isort
-      nix4vscode-extensions.ms-python.vscode-pylance
-      nix4vscode-extensions.dbaeumer.vscode-eslint
-      nix4vscode-extensions.esbenp.prettier-vscode
-      # nix4vscode-extensions.eamodio.gitlens
-      nix4vscode-extensions.redhat.vscode-yaml
-      nix4vscode-extensions.coolbear.systemd-unit-file
-      nix4vscode-extensions.tamasfe.even-better-toml
-      nix4vscode-extensions.arrterian.nix-env-selector
-      nix4vscode-extensions.jnoortheen.nix-ide
-      nix4vscode-extensions.sanaajani.taskrunnercode
-      nix4vscode-extensions.vscode-org-mode.org-mode
-      # nix4vscode-extensions.ms-toolsai.jupyter # hash mismatch
-      nix4vscode-extensions.gleam.gleam
-      nix4vscode-extensions.jakebecker.elixir-ls
-      nix4vscode-extensions.github.vscode-github-actions
-    ];
 
+    extensions = with lib; lists.flatten (map attrsets.attrValues (attrsets.attrValues nix4vscode-extensions));
 
     userSettings = {
       "editor.fontFamily" = "'Fira Code'";
