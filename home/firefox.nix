@@ -96,6 +96,15 @@ rec {
             icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
             definedAliases = [ "@np" ];
           };
+
+          "Wayback Machine" = {
+            urls = [{
+              template = "https://web.archive.org/web/*/%S";
+            }];
+            definedAliases = [ "@wm" ];
+            iconUpdateURL = "https://web-static.archive.org/_static/images/archive.ico";
+            updateInterval = 24 * 60 * 60 * 1000;
+          };
         };
       };
     };
