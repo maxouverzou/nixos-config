@@ -2,21 +2,21 @@
 {
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = lib.mkDefault true;
-  services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.displayManager.defaultSession = "plasmawayland";
+  services.xserver.desktopManager.plasma6.enable = true;
+  services.xserver.displayManager.defaultSession = "plasma";
 
   security.pam.services.kwallet = {
     name = "kwallet";
     enableKwallet = true;
   };
 
-  environment.plasma5.excludePackages = with pkgs.libsForQt5; [
+  environment.plasma6.excludePackages = with pkgs.libsForQt5; [
     oxygen
   ];
 
   # install packages
   environment.systemPackages = with pkgs; [
-    libsForQt5.bismuth
+    libsForQt5.polonium
     libsForQt5.kate
     libsForQt5.kdeconnect-kde
     libsForQt5.plasma-applet-caffeine-plus
