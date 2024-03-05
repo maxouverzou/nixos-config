@@ -15,20 +15,22 @@
   ];
 
   # install packages
-  environment.systemPackages = with pkgs; [
-    libsForQt5.polonium
-    libsForQt5.kate
-    libsForQt5.kdeconnect-kde
-    libsForQt5.plasma-applet-caffeine-plus
-    libsForQt5.plasma-browser-integration
-    libsForQt5.plasma-thunderbolt
-    libsForQt5.yakuake
-
-    gnome-firmware # TODO find kde alternative (that is not discover)
-    partition-manager
-    qbittorrent
-    syncthingtray
-  ];
+  environment.systemPackages =
+    (with pkgs.libsForQt5; [
+      polonium
+      kate
+      kdeconnect-kde
+      plasma-applet-caffeine-plus
+      plasma-browser-integration
+      plasma-thunderbolt
+      yakuake
+      ktorrent
+      kcachegrind
+    ]) ++ (with pkgs; [
+      gnome-firmware # TODO find kde alternative (that is not discover)
+      partition-manager
+      syncthingtray
+    ]);
 
   networking.firewall = {
     # enable = lib.mkDefault true;
