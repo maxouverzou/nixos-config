@@ -79,3 +79,19 @@ extension_name = "elixir-ls"
 [[extensions]]
 publisher_name = "GitHub"
 extension_name = "vscode-github-actions"
+
+# [[extensions]]
+# publisher_name = "i-daridis"
+# extension_name = "souffle-lang-server"
+
+[[extensions]]
+publisher_name = "W4RH4WK"
+extension_name = "souffle-syntax"
+
+[[extensions]]
+publisher_name = "jq-syntax-highlighting"
+extension_name = "jq-syntax-highlighting"
+
+[[extensions]]
+publisher_name = "denoland"
+extension_name = "vscode-deno"
