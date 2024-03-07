@@ -78,6 +78,7 @@ in
           ./graphical/1password.nix
           ./graphical/pipewire.nix
           ./graphical/fonts.nix
+          ./yubikey.nix
         ];
         home-manager.users = mkHomes config.activeUsers "linux-graphical";
       };

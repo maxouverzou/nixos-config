@@ -30,6 +30,7 @@
       gnome-firmware # TODO find kde alternative (that is not discover)
       partition-manager
       syncthingtray
+      yubikey-manager-qt
     ]);
 
   networking.firewall = {
