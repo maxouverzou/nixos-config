@@ -7,14 +7,14 @@ in
   "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
     name = "python";
     publisher = "ms-python";
-    version = "2024.3.10660538";
-    sha256 = "01fxlg46c0swniz9dva98s4z83qk4rx1w7swxq3h10i9c2kh2c4x";
+    version = "2024.3.10681011";
+    sha256 = "0lx82p85qm2256qnzmb0mfsxfc3wzi94wamki0gyy202gv297yhj";
   };
   "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-pylance";
     publisher = "ms-python";
-    version = "2024.2.105";
-    sha256 = "0iyz05nbkfmpn564axnd2fi1a4h15nr9yq3lzrxyd6zd7wk5ax73";
+    version = "2024.2.106";
+    sha256 = "1kz337x9k0im2clrga8244wscfkwkz591i10q6mnlivphvc1qp1s";
   };
   "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
     name = "prettier-vscode";
@@ -31,8 +31,8 @@ in
   "ms-python"."isort" = vscode-utils.extensionFromVscodeMarketplace {
     name = "isort";
     publisher = "ms-python";
-    version = "2023.13.10531006";
-    sha256 = "0dbik155q4v9m9xypayshnxa3skrask2fybkgdya2kvsag0cwspj";
+    version = "2023.13.10681007";
+    sha256 = "134cljivnpba8h27xwa6dww1majp5jrgljyij1jng32rmi7ylzlp";
   };
   "ms-vsliveshare"."vsliveshare" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vsliveshare";
@@ -61,8 +61,8 @@ in
   "denoland"."vscode-deno" = vscode-utils.extensionFromVscodeMarketplace {
     name = "vscode-deno";
     publisher = "denoland";
-    version = "3.33.3";
-    sha256 = "039yj1c9w42w3nwg00ab4kjwxzznscq481rkbjw5mi094cfmh1lk";
+    version = "3.35.1";
+    sha256 = "07sm905zjvazp4dfghzc7bcwqaiynaplhfi1k5xdgx09i4f4rgbf";
   };
   "jakebecker"."elixir-ls" = vscode-utils.extensionFromVscodeMarketplace {
     name = "elixir-ls";
