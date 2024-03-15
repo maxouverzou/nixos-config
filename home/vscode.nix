@@ -25,19 +25,40 @@ in
 
     mutableExtensionsDir = false;
 
-    extensions = with lib; lists.flatten (map attrsets.attrValues (attrsets.attrValues nix4vscode-extensions));
+    extensions = (with lib; lists.flatten (map attrsets.attrValues (attrsets.attrValues nix4vscode-extensions)))
+    ++ (with pkgs.vscode-extensions; [
+      ms-toolsai.jupyter # hash mismatch when building via nix4vscode 
+    ]);
 
     userSettings = {
-      "editor.fontFamily" = "'Fira Code'";
-      /* [
-        "'Fira Code'"
-        "'Droid Sans Mono'"
-        "'monospace'"
-        "monospace"
-      ]; */
-      "files.autoSave" = "off";
+      "explorer.confirmDragAndDrop" = false;
+      "task.allowAutomaticTasks" = "on";
+      "[editor]" = {
+        "rulers" = [ 80 100 ];
+        "fontFamily" = "'Fira Code'";
+      };
+      "[files]" = {
+        "autoSave" = "off";
+        "exclude" = {
+          "**/.git" = true;
+          "**/*.js" = {
+            when = "$(basename).ts";
+          };
+        };
+      };
+      # language settings
+      "[javascript]" = {
+        "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "updateImportsOnFileMove.enabled" = "always";
+      };
+      "[json]" = {
+        "editor.defaultFormatter" = "vscode.json-language-features";
+      };
       "[nix]"."editor.tabSize" = 2;
-      # "[nix]"
+      "[python]" = {
+        "formatting.provider" = "black";
+        "formatting.blackPath" = "${pkgs.black}/bin/black";
+      };
       "[typescript]" = {
         "updateImportsOnFileMove.enabled" = "always";
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
@@ -46,32 +67,19 @@ in
           "source.fixAll.eslint" = true;
         };
       };
-      "[javascript]" = {
-        "editor.defaultFormatter" = "esbenp.prettier-vscode";
-        "updateImportsOnFileMove.enabled" = "always";
+      "[yaml]" = {
+        "editor.defaultFormatter" = "redhat.vscode-yaml";
+        "customTags" = [
+          "!Ref scalar"
+          "!Equals sequence"
+          "!Not sequence"
+          "!If sequence"
+          "!GetAtt scalar"
+          "!Sub scalar"
+        ];
       };
-      "[python]" = {
-        "formatting.provider" = "black";
-        "formatting.blackPath" = "${pkgs.black}/bin/black";
-      };
-      "yaml.customTags" = [
-        "!Ref scalar"
-        "!Equals sequence"
-        "!Not sequence"
-        "!If sequence"
-        "!GetAtt scalar"
-        "!Sub scalar"
-      ];
+      # extension setting
       "gitlens.plusFeatures.enabled" = false;
-      "files.exclude" = {
-        "**/.git" = true;
-        "**/*.js" = {
-          when = "$(basename).ts";
-        };
-      };
-      "task.allowAutomaticTasks" = "on";
-      "editor.rulers" = [ 80 100 ];
-      "explorer.confirmDragAndDrop" = false;
     };
 
   };
