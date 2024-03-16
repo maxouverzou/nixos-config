@@ -17,4 +17,7 @@ nix flake update
 # partial update
 nix flake lock --update-input nixpkgs --update-input darwin --update-input home-manager
 (or? nix run .#update)
+
+# find why package is installed
+nix why-depends /run/current-system nixpkgs#curl
 ```
