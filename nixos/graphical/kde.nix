@@ -2,7 +2,7 @@
 {
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = lib.mkDefault true;
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.desktopManager.plasma6.enable = true;
   services.xserver.displayManager.defaultSession = "plasma";
 
   security.pam.services.kwallet = {
@@ -25,7 +25,6 @@
       plasma-thunderbolt
       yakuake
       ktorrent
-      kcachegrind
     ]) ++ (with pkgs; [
       gnome-firmware # TODO find kde alternative (that is not discover)
       partition-manager
