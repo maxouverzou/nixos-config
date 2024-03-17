@@ -33,17 +33,13 @@ in
     userSettings = {
       "explorer.confirmDragAndDrop" = false;
       "task.allowAutomaticTasks" = "on";
-      "[editor]" = {
-        "rulers" = [ 80 100 ];
-        "fontFamily" = "'Fira Code'";
-      };
-      "[files]" = {
-        "autoSave" = "off";
-        "exclude" = {
-          "**/.git" = true;
-          "**/*.js" = {
-            when = "$(basename).ts";
-          };
+      "editor.rulers" = [ 80 100 ];
+      "editor.fontFamily" = "'Fira Code'";
+      "files.autoSave" = "off";
+      "files.exclude" = {
+        "**/.git" = true;
+        "**/*.js" = {
+          when = "$(basename).ts";
         };
       };
       # language settings
@@ -69,15 +65,15 @@ in
       };
       "[yaml]" = {
         "editor.defaultFormatter" = "redhat.vscode-yaml";
-        "customTags" = [
-          "!Ref scalar"
-          "!Equals sequence"
-          "!Not sequence"
-          "!If sequence"
-          "!GetAtt scalar"
-          "!Sub scalar"
-        ];
       };
+      "yaml.customTags" = [
+        "!Ref scalar"
+        "!Equals sequence"
+        "!Not sequence"
+        "!If sequence"
+        "!GetAtt scalar"
+        "!Sub scalar"
+      ];
       # extension setting
       "gitlens.plusFeatures.enabled" = false;
     };
