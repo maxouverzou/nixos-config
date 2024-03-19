@@ -15,9 +15,11 @@ in
   headsetcontrol-udev = super.callPackage ../custom/headsetcontrol-udev.nix { };
   hyprshot = super.callPackage ../custom/hyprshot.nix { };
   icloud-drive-fuse = super.callPackage ../custom/icloud-drive-fuse.nix { };
+  jnv = super.callPackage ../custom/jnv.nix { };
   redis-cli = super.callPackage ../custom/redis-cli.nix { };
   tile-stitch = super.callPackage ../custom/tile-stitch.nix { };
   unbound-blocklist-stevenblack = super.callPackage ../custom/unbound-blocklist-stevenblack.nix { };
+  walk = super.callPackage ../custom/walk.nix { };
 
   tex-mine = super.callPackage ../custom/tex-mine.nix { };
 }
