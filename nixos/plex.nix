@@ -1,36 +1,13 @@
 { config, pkgs, lib, ... }:
 {
-  environment.systemPackages = with pkgs; [
-    nfs-utils
+  imports = [
+    ./nas/public.nix
   ];
 
   services.plex = {
     enable = true;
     openFirewall = true;
   };
-
-  networking.extraHosts =
-    ''
-      192.168.1.250 nas
-    '';
-
-  services.rpcbind.enable = true;
-  systemd.mounts = [{
-    type = "nfs";
-    mountConfig = {
-      Options = "noatime,nolock";
-    };
-    what = "nas:/volume1/public";
-    where = "/mnt/nas_public";
-  }];
-
-  systemd.automounts = [{
-    wantedBy = [ "multi-user.target" "plex.service" ];
-    automountConfig = {
-      TimeoutIdleSec = "600";
-    };
-    where = "/mnt/nas_public";
-  }];
 
   powerManagement.enable = false;
 
