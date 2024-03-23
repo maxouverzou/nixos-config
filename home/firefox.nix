@@ -21,6 +21,7 @@ rec {
         ublock-origin
 
         steam-database
+        greasemonkey
         # user-agent switcher and manager?
       ];
 
@@ -53,6 +54,12 @@ rec {
         "privacy.trackingprotection.enabled" = true;
         "privacy.trackingprotection.socialtracking.enabled" = true;
       };
+
+      userContent = ''
+        @-moz-document domain(lemmy.today) {
+          container-lg { max-width: 100% !important; }
+        }
+      '';
 
       search = {
         default = "DuckDuckGo";
