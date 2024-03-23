@@ -3,7 +3,7 @@
     nfs-utils
   ];
   services.rpcbind.enable = true;
-  
+
   systemd.mounts = [{
     type = "nfs";
     mountConfig = {
