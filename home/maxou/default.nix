@@ -9,9 +9,11 @@
     awscli2
     ssm-session-manager-plugin
 
-    gleam
+    # gleam
 
     encfs
     sshfs
   ];
+
+  home.file.".jq".source = ./home.jq;
 }
