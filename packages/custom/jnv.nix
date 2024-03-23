@@ -17,6 +17,6 @@ rustPlatform.buildRustPackage rec {
     description = "Interactive command-line JSON processor based on JQ";
     homepage = "https://github.com/ynqa/jnv";
     license = licenses.mit;
-    maintainers = [];
+    maintainers = [ ];
   };
 }

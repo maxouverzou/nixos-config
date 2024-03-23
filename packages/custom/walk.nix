@@ -17,6 +17,6 @@ buildGoModule rec {
     description = "Terminal file manager";
     homepage = "https://github.com/antonmedv/walk";
     license = licenses.mit;
-    maintainers = [];
+    maintainers = [ ];
   };
 }
