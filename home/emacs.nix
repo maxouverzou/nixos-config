@@ -1,8 +1,8 @@
 { lib, pkgs, ... }: {
   home.packages = with pkgs; [
     beancount
-    fava
-    tex-mine
+    # fava
+    # tex-mine
   ];
 
   programs.doom-emacs = {
