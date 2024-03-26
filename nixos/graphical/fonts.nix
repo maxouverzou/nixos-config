@@ -14,6 +14,7 @@
       liberation_ttf # wine compa fonts
       libertine
 
+      nerdfonts # TODO: replaces powerline & font-awesome?
       powerline # duh
       font-awesome # waybar, etc
     ];
