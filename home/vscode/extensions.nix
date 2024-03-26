@@ -10,6 +10,12 @@ merge
     (merge
       (merge
       {
+        "redhat"."vscode-yaml" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "vscode-yaml";
+          publisher = "redhat";
+          version = "1.14.0";
+          sha256 = "0pww9qndd2vsizsibjsvscz9fbfx8srrj67x4vhmwr581q674944";
+        };
         "ms-python"."python" = vscode-utils.extensionFromVscodeMarketplace {
           name = "python";
           publisher = "ms-python";
@@ -76,12 +82,6 @@ merge
           version = "0.20.0";
           sha256 = "1qap15kxcqmmp0qb8mq5k1s15gvmcsa26c8krhgg20zk3h2hvrm7";
         };
-        "mathematic"."vscode-latex" = vscode-utils.extensionFromVscodeMarketplace {
-          name = "vscode-latex";
-          publisher = "mathematic";
-          version = "1.3.0";
-          sha256 = "0iv50mand7ibs6ki21whhszg8bqn3c1gz3a1hy97j93xx6jwqrpy";
-        };
         "coolbear"."systemd-unit-file" = vscode-utils.extensionFromVscodeMarketplace {
           name = "systemd-unit-file";
           publisher = "coolbear";
@@ -137,8 +137,40 @@ merge
           sha256 = "0j3q1pfg4q0w4c4hf2hs7213zlg3g6n84drrbh2fy42azhzh757m";
         };
       }
-        (lib.attrsets.optionalAttrs (isLinux && (isi686 || isx86_64)) { }))
-      (lib.attrsets.optionalAttrs (isLinux && (isAarch32 || isAarch64)) { }))
-    (lib.attrsets.optionalAttrs (isDarwin && (isi686 || isx86_64)) { }))
-  (lib.attrsets.optionalAttrs (isDarwin && (isAarch32 || isAarch64)) { })
+        (lib.attrsets.optionalAttrs (isLinux && (isi686 || isx86_64)) {
+          "ms-toolsai"."jupyter" = vscode-utils.extensionFromVscodeMarketplace {
+            name = "jupyter";
+            publisher = "ms-toolsai";
+            version = "2024.2.2024022602";
+            sha256 = "1j61qbbskq9pjxkis042k6ainmsmc2vc70wyxrk298n1a94mfqsy";
+            arch = "linux-x64";
+          };
+        }))
+      (lib.attrsets.optionalAttrs (isLinux && (isAarch32 || isAarch64)) {
+        "ms-toolsai"."jupyter" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "jupyter";
+          publisher = "ms-toolsai";
+          version = "2024.2.2024022602";
+          sha256 = "1709nsasjcpjcjhyvjimyz1q1sq1f3zi6276d7pxpysivpz0h4jz";
+          arch = "linux-arm64";
+        };
+      }))
+    (lib.attrsets.optionalAttrs (isDarwin && (isi686 || isx86_64)) {
+      "ms-toolsai"."jupyter" = vscode-utils.extensionFromVscodeMarketplace {
+        name = "jupyter";
+        publisher = "ms-toolsai";
+        version = "2024.2.2024022602";
+        sha256 = "0am5837rfzwc1j3zy01lmmd8803x498k88gyp7ibl0jqpkqk8wl1";
+        arch = "darwin-x64";
+      };
+    }))
+  (lib.attrsets.optionalAttrs (isDarwin && (isAarch32 || isAarch64)) {
+    "ms-toolsai"."jupyter" = vscode-utils.extensionFromVscodeMarketplace {
+      name = "jupyter";
+      publisher = "ms-toolsai";
+      version = "2024.2.2024022602";
+      sha256 = "0h1l3nidzq8n3d8z5jingbdv5hckb8wg1609cmn89hyjnafwvmwy";
+      arch = "darwin-arm64";
+    };
+  })
 

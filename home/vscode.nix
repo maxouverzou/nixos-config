@@ -51,6 +51,9 @@ in
       "[json]" = {
         "editor.defaultFormatter" = "vscode.json-language-features";
       };
+      "[latex]" = {
+        "editor.defaultFormatter" = "James-Yu.latex-workshop";
+      };
       "[nix]"."editor.tabSize" = 2;
       "[python]" = {
         "formatting.provider" = "black";
@@ -61,7 +64,7 @@ in
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
         "editor.formatOnSave" = true;
         "editor.codeActionsOnSave" = {
-          "source.fixAll.eslint" = true;
+          "source.fixAll.eslint" = "explicit";
         };
       };
       "[yaml]" = {
