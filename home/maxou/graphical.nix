@@ -12,5 +12,6 @@
     vlc
     yt-dlp
     zoom-us
+    sublime3
   ];
 }
