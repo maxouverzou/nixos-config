@@ -1,4 +1,4 @@
-vscode_version = "1.87.1"
+vscode_version = "1.87.2"
 
 [[extensions]]
 publisher_name = "ms-python"
@@ -95,3 +95,11 @@ extension_name = "jq-syntax-highlighting"
 [[extensions]]
 publisher_name = "denoland"
 extension_name = "vscode-deno"
+
+[[extensions]]
+publisher_name = "James-Yu"
+extension_name = "latex-workshop"
+
+[[extensions]]
+publisher_name = "mathematic"
+extension_name = "vscode-latex"
