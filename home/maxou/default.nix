@@ -3,6 +3,7 @@
     ../syncthing.nix
     ./secrets.nix
     ../emacs.nix
+    ../nushell.nix
   ];
 
   home.packages = with pkgs; [
