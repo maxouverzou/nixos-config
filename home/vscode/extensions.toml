@@ -36,9 +36,9 @@ extension_name = "taskrunnercode"
 publisher_name = "ms-vsliveshare"
 extension_name = "vsliveshare"
 
-[[extensions]]
-publisher_name = "redhat"
-extension_name = "vscode-yaml"
+#[[extensions]]
+#publisher_name = "redhat"
+#extension_name = "vscode-yaml"
 
 [[extensions]]
 publisher_name = "coolbear"
