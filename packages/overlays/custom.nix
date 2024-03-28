@@ -9,6 +9,7 @@ in
   python310 = super.python310.override pythonOverrides;
   python311 = super.python311.override pythonOverrides;
 
+  clickup = super.callPackage ../custom/clickup.nix { };
   fuckport = super.callPackage ../custom/fuckport.nix { };
   git-diff-image = super.callPackage ../custom/git-diff-image.nix { };
   gpx-reduce = super.callPackage ../custom/gpx-reduce.nix { };
