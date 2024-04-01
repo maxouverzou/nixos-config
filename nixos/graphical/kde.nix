@@ -1,7 +1,10 @@
 { config, pkgs, lib, ... }:
 {
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = lib.mkDefault true;
+  services.xserver.displayManager.sddm = {
+    enable = lib.mkDefault true;
+    wayland.enable = lib.mkDefault true;
+  };
   services.desktopManager.plasma6.enable = true;
   services.xserver.displayManager.defaultSession = "plasma";
 
