@@ -11,6 +11,7 @@ in
 
   clickup = super.callPackage ../custom/clickup.nix { };
   fuckport = super.callPackage ../custom/fuckport.nix { };
+  glim = super.callPackage ../custom/glim.nix { };
   git-diff-image = super.callPackage ../custom/git-diff-image.nix { };
   gpx-reduce = super.callPackage ../custom/gpx-reduce.nix { };
   headsetcontrol-udev = super.callPackage ../custom/headsetcontrol-udev.nix { };
