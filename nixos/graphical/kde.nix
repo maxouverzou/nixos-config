@@ -4,6 +4,12 @@
   services.xserver.displayManager.sddm = {
     enable = lib.mkDefault true;
     wayland.enable = lib.mkDefault true;
+    settings = lib.mkIf (builtins.length config.activeUsers == 1) {
+      Autologin = {
+        Session = "plasma.desktop";
+        User = builtins.elemAt config.activeUsers 0;
+      };
+    };
   };
   services.desktopManager.plasma6.enable = true;
   services.xserver.displayManager.defaultSession = "plasma";
@@ -33,7 +39,7 @@
       partition-manager
       syncthingtray
       yubikey-manager-qt
-    ]);
+    ]) ++ (lib.optional config.virtualisation.libvirtd.enable pkgs.virt-manager);
 
   networking.firewall = {
     # enable = lib.mkDefault true;
