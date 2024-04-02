@@ -39,7 +39,6 @@ rec {
         "browser.newtabpage.activity-stream.feeds.discoverystreamfeed" = true;
         "browser.newtabpage.activity-stream.feeds.section.topstories" = false;
 
-
         "browser.newtabpage.activity-stream.discoverystream.editorsPicksHeader.enabled" = false;
         "browser.newtabpage.activity-stream.discoverystream.newSponsoredLabel.enabled" = false;
         "browser.newtabpage.activity-stream.discoverystream.sponsored-collections.enabled" = false;
