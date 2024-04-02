@@ -11,14 +11,15 @@ in
 
   clickup = super.callPackage ../custom/clickup.nix { };
   fuckport = super.callPackage ../custom/fuckport.nix { };
-  glim = super.callPackage ../custom/glim.nix { };
   git-diff-image = super.callPackage ../custom/git-diff-image.nix { };
+  glim = super.callPackage ../custom/glim.nix { };
   gpx-reduce = super.callPackage ../custom/gpx-reduce.nix { };
   headsetcontrol-udev = super.callPackage ../custom/headsetcontrol-udev.nix { };
   hyprshot = super.callPackage ../custom/hyprshot.nix { };
   icloud-drive-fuse = super.callPackage ../custom/icloud-drive-fuse.nix { };
   jnv = super.callPackage ../custom/jnv.nix { };
   redis-cli = super.callPackage ../custom/redis-cli.nix { };
+  tails = super.callPackage ../custom/tails.nix { };
   tile-stitch = super.callPackage ../custom/tile-stitch.nix { };
   unbound-blocklist-stevenblack = super.callPackage ../custom/unbound-blocklist-stevenblack.nix { };
   walk = super.callPackage ../custom/walk.nix { };
