@@ -1,4 +1,7 @@
-{ self, ... }: {
+{ self
+, pkgs
+, ...
+}: {
   imports =
     [
       ../../nixos/dns-over-https.nix
@@ -10,6 +13,10 @@
       # ../../profiles/laptop.nix
       # ../../components/syncthing.system.nix
     ];
+
+  virtualisation.libvirtd = {
+    enable = true;
+  };
 
   networking = {
     hostName = "glados";
