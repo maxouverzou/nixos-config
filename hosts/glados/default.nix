@@ -18,6 +18,13 @@
     enable = true;
   };
 
+  /* remove these once the migration to btrfs is done */
+  boot.supportedFilesystems = [ "btrfs" "ext4" ];
+  boot.initrd.kernelModules = [ "btrfs" ];
+  environment.systemPackages = [
+    pkgs.btrfs-progs
+  ];
+
   networking = {
     hostName = "glados";
     domain = "local";
