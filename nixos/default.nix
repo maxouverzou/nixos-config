@@ -53,8 +53,9 @@ in
           ./localization.nix
           ./ntp.nix
           ./security.nix
-          ./shell.nix
           ./setup-groups.nix
+          ./shell.nix
+          ./troubleshooting.nix
         ];
         options = {
           activeUsers = lib.mkOption {

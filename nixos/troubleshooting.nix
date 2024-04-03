@@ -1,13 +1,16 @@
-{
+{ pkgs
+, ...
+}: {
   environment.systemPackages = with pkgs; [
-    lsof
     btop
+    dmidecode
+    htop
     iftop
     iotop
-    s-tui
-    pciutils
-    dmidecode
     lshw
+    lsof
+    pciutils
+    s-tui
     usbutils
   ];
 }
