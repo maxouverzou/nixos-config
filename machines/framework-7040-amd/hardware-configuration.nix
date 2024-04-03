@@ -36,7 +36,8 @@
     }
   ];
   boot.resumeDevice = "/dev/disk/by-label/nixos";
-  boot.kernelParams = [ "resume_offset=33413120" ];
+  # $ sudo filefrag -v /swapfile | awk '$1=="0:" {print substr($4, 1, length($4)-2)}'
+  boot.kernelParams = [ "resume_offset=33413120" ]; # for hibernation support
 
   hardware.opengl.enable = true;
 
