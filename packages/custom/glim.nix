@@ -3,16 +3,18 @@
 , stdenv
 , unstableGitUpdater
 , makeWrapper
-# dependencies
+  # dependencies
 , grub2
 , grub2_efi
 , rsync
-}: let
+}:
+let
   wrapperPath = with lib; makeBinPath ([
     grub2
     rsync
   ]);
-in stdenv.mkDerivation {
+in
+stdenv.mkDerivation {
   pname = "glim";
   version = "unstable-2023-08-20";
 
