@@ -11,6 +11,7 @@
     ssm-session-manager-plugin
 
     # gleam
+    helix
 
     encfs
     sshfs
