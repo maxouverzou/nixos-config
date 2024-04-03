@@ -19,6 +19,7 @@ in
   icloud-drive-fuse = super.callPackage ../custom/icloud-drive-fuse.nix { };
   jnv = super.callPackage ../custom/jnv.nix { };
   redis-cli = super.callPackage ../custom/redis-cli.nix { };
+  rsync-backup-to-nas = super.callPackage ../custom/rsync-backup-to-nas.nix { };
   tails = super.callPackage ../custom/tails.nix { };
   tile-stitch = super.callPackage ../custom/tile-stitch.nix { };
   unbound-blocklist-stevenblack = super.callPackage ../custom/unbound-blocklist-stevenblack.nix { };
