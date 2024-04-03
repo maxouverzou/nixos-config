@@ -12,6 +12,7 @@
 
     # gleam
     helix
+    rsync-backup-to-nas
 
     encfs
     sshfs
