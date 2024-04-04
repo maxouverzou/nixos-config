@@ -28,14 +28,16 @@ in
     extensions = (with lib; lists.flatten (map attrsets.attrValues (attrsets.attrValues nix4vscode-extensions)))
       ++ (with pkgs.vscode-extensions; [
       ms-toolsai.jupyter # hash mismatch when building via nix4vscode 
+      dracula-theme.theme-dracula # TODO move once nix4vscode is fixed
     ]);
 
     userSettings = {
+      "workbench.colorTheme" = "Dracula";
       "explorer.confirmDragAndDrop" = false;
       "task.allowAutomaticTasks" = "on";
       "editor.rulers" = [ 80 100 ];
-      "editor.fontFamily" = "'Fira Code'";
-      "debug.console.fontFamily" = "'Fira Mono'"; # create some testing accounts
+      "editor.fontFamily" = "'FiraCode Nerd Font'";
+      "debug.console.fontFamily" = "'FiraMono Nerd Font'";
       "files.autoSave" = "off";
       "files.exclude" = {
         "**/.git" = true;

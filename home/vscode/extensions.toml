@@ -103,3 +103,7 @@ extension_name = "latex-workshop"
 # [[extensions]]
 # publisher_name = "mathematic"
 # extension_name = "vscode-latex"
+
+[[extensions]]
+publisher_name = "dracula-theme"
+extension_name = "theme-dracula"
