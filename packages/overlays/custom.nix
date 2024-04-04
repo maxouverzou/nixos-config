@@ -10,6 +10,7 @@ in
   python311 = super.python311.override pythonOverrides;
 
   clickup = super.callPackage ../custom/clickup.nix { };
+  dracula-konsole = super.callPackage ../custom/dracula-konsole.nix { };
   fuckport = super.callPackage ../custom/fuckport.nix { };
   git-diff-image = super.callPackage ../custom/git-diff-image.nix { };
   glim = super.callPackage ../custom/glim.nix { };

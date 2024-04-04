@@ -13,4 +13,10 @@
     yt-dlp
     zoom-us
   ];
+
+  home.file = {
+    ".local/share/konsole/Dracula.colorscheme" = {
+      source = "${pkgs.dracula-konsole}";
+    };
+  };
 }
