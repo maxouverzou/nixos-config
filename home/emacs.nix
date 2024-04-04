@@ -1,6 +1,7 @@
 { lib, pkgs, ... }: {
   home.packages = with pkgs; [
     beancount
+    sqlite # a dependency of orgmode roam2
     # fava
     # tex-mine
   ];
