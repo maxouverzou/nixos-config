@@ -8,13 +8,13 @@
           ./direnv.nix
           ./fish.nix
           ./git.nix
-          ./powerline.nix
+          # ./powerline.nix
           ./terminal.nix
           ./tmux.nix
           ./zellij.nix
           ./ssh.nix
           #./neovim.nix
-          #./starship.nix
+          ./starship.nix
           self.inputs.sops-nix.homeManagerModules.sops
           self.inputs.nix-doom-emacs.hmModule
         ];
