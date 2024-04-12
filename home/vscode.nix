@@ -27,8 +27,8 @@ in
 
     extensions = (with lib; lists.flatten (map attrsets.attrValues (attrsets.attrValues nix4vscode-extensions)))
       ++ (with pkgs.vscode-extensions; [
-      ms-toolsai.jupyter # hash mismatch when building via nix4vscode 
-      dracula-theme.theme-dracula # TODO move once nix4vscode is fixed
+      redhat.vscode-yaml # https://github.com/nix-community/nix4vscode/issues/54
+      # ms-toolsai.jupyter # hash mismatch when building via nix4vscode 
     ]);
 
     userSettings = {

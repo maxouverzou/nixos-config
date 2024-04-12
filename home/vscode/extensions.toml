@@ -1,4 +1,4 @@
-vscode_version = "1.87.2"
+vscode_version = "1.88.0"
 
 [[extensions]]
 publisher_name = "ms-python"
@@ -36,21 +36,18 @@ extension_name = "taskrunnercode"
 publisher_name = "ms-vsliveshare"
 extension_name = "vsliveshare"
 
+# https://github.com/nix-community/nix4vscode/issues/54
 #[[extensions]]
 #publisher_name = "redhat"
 #extension_name = "vscode-yaml"
 
 [[extensions]]
+publisher_name = "dracula-theme"
+extension_name = "theme-dracula"
+
+[[extensions]]
 publisher_name = "coolbear"
 extension_name = "systemd-unit-file"
-
-#[[extensions]]
-#publisher_name = "devicescript"
-#extension_name = "devicescript-vscode"
-
-#[[extensions]]
-#publisher_name = "eamodio"
-#extension_name = "gitlens"
 
 [[extensions]]
 publisher_name = "tamasfe"
@@ -80,10 +77,6 @@ extension_name = "elixir-ls"
 publisher_name = "GitHub"
 extension_name = "vscode-github-actions"
 
-# [[extensions]]
-# publisher_name = "i-daridis"
-# extension_name = "souffle-lang-server"
-
 [[extensions]]
 publisher_name = "W4RH4WK"
 extension_name = "souffle-syntax"
@@ -100,10 +93,10 @@ extension_name = "vscode-deno"
 publisher_name = "James-Yu"
 extension_name = "latex-workshop"
 
-# [[extensions]]
-# publisher_name = "mathematic"
-# extension_name = "vscode-latex"
-
 [[extensions]]
 publisher_name = "dracula-theme"
 extension_name = "theme-dracula"
+
+#[[extensions]]
+#publisher_name = "eamodio"
+#extension_name = "gitlens"
