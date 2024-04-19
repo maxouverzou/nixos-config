@@ -19,8 +19,8 @@ merge
         "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-pylance";
           publisher = "ms-python";
-          version = "2024.4.101";
-          sha256 = "13yi6v1l7k1g0r7fhw3gasv7drn03slh0lxp6pcmqlrajkp0cn1n";
+          version = "2024.4.102";
+          sha256 = "0yfcb7cq03cxjz85kys35y16j9x52xrf652c08dfld6z9crv26c0";
         };
         "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
           name = "prettier-vscode";
@@ -40,6 +40,12 @@ merge
           version = "2023.13.10681007";
           sha256 = "134cljivnpba8h27xwa6dww1majp5jrgljyij1jng32rmi7ylzlp";
         };
+        "ms-vscode-remote"."remote-ssh" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "remote-ssh";
+          publisher = "ms-vscode-remote";
+          version = "0.111.2024040515";
+          sha256 = "0dd47p60y29g1xcq4ip9l0p53klzf0kf0brr3cq8l7ymfpf2vxg7";
+        };
         "ms-vsliveshare"."vsliveshare" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vsliveshare";
           publisher = "ms-vsliveshare";
@@ -55,8 +61,8 @@ merge
         "james-yu"."latex-workshop" = vscode-utils.extensionFromVscodeMarketplace {
           name = "latex-workshop";
           publisher = "james-yu";
-          version = "9.19.2";
-          sha256 = "08w3rhrdwabkvbc0bzhz3rj7kwxgpg4gvkip2xvs8imfm6xx51ik";
+          version = "9.20.0";
+          sha256 = "140pyh5alx8nawnqg4bsj2x8hmffywn5v08zq09mm0asbds3ghf5";
         };
         "github"."vscode-github-actions" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-github-actions";
@@ -73,8 +79,8 @@ merge
         "denoland"."vscode-deno" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-deno";
           publisher = "denoland";
-          version = "3.36.0";
-          sha256 = "1l094qk854vgabbxbxkc8bqzwgld949sh9yvk44gl255ixqgnxy4";
+          version = "3.37.0";
+          sha256 = "0vbwcihw27vnlkfkrchqy1m9i1ivd4iv2rzb6kj0bq7kg0y2lh5h";
         };
         "jakebecker"."elixir-ls" = vscode-utils.extensionFromVscodeMarketplace {
           name = "elixir-ls";
@@ -106,17 +112,17 @@ merge
           version = "1.0.0";
           sha256 = "1dp6mz1rb8awrrpig1j8y6nyln0186gkmrflfr8hahaqr668il53";
         };
-        "rubymaniac"."vscode-direnv" = vscode-utils.extensionFromVscodeMarketplace {
-          name = "vscode-direnv";
-          publisher = "rubymaniac";
-          version = "0.0.2";
-          sha256 = "1gml41bc77qlydnvk1rkaiv95rwprzqgj895kxllqy4ps8ly6nsd";
-        };
         "arrterian"."nix-env-selector" = vscode-utils.extensionFromVscodeMarketplace {
           name = "nix-env-selector";
           publisher = "arrterian";
           version = "1.0.11";
           sha256 = "113zx78c3219knw4qa04242404n32vnk9rb6a3ynz41dgwh1mbbl";
+        };
+        "rubymaniac"."vscode-direnv" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "vscode-direnv";
+          publisher = "rubymaniac";
+          version = "0.0.2";
+          sha256 = "1gml41bc77qlydnvk1rkaiv95rwprzqgj895kxllqy4ps8ly6nsd";
         };
         "jq-syntax-highlighting"."jq-syntax-highlighting" = vscode-utils.extensionFromVscodeMarketplace {
           name = "jq-syntax-highlighting";

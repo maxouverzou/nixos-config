@@ -1,6 +1,10 @@
 vscode_version = "1.88.0"
 
 [[extensions]]
+publisher_name = "ms-vscode-remote"
+extension_name = "remote-ssh"
+
+[[extensions]]
 publisher_name = "ms-python"
 extension_name = "python"
 
