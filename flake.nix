@@ -124,6 +124,7 @@
         };
         */
 
+        /*
         packages.x86_64-linux = {
           rpi3 = inputs.nixos-generators.nixosGenerate {
             # specialArgs = { inherit inputs outputs; };
@@ -134,7 +135,7 @@
             format = "sd-aarch64-installer";
           };
         };
-
+        */
       };
 
       perSystem = { self', system, pkgs, lib, config, inputs', ... }: {
