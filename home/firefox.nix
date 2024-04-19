@@ -112,6 +112,15 @@ rec {
             iconUpdateURL = "https://web-static.archive.org/_static/images/archive.ico";
             updateInterval = 24 * 60 * 60 * 1000;
           };
+
+          "DevDocs" = {
+            urls = [{
+              template = "https://devdocs.io/#q={searchTerms}";
+            }];
+            definedAliases = [ "@dd" ];
+            iconUpdateURL = "https://devdocs.io/favicon.ico";
+            updateInterval = 24 * 60 * 60 * 1000;
+          };
         };
       };
     };
