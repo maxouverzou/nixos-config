@@ -19,4 +19,11 @@
       source = "${pkgs.dracula-konsole}";
     };
   };
+
+  services.gpg-agent = {
+    pinentryPackage = pkgs.pinentry-qt;
+    extraConfig = ''
+      pinentry-program ${pkgs.pinentry-qt}/bin/pinentry-qt
+    '';
+  };
 }
