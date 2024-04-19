@@ -15,7 +15,9 @@
       uid = 1001;
       name = "Milou";
       email = "mi@lou.com";
-      sshKeys = [ ];
+      sshKeys = [
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDH8hfx9L4FZNE2ayI9WN9Duu8Avr1lk33tfZrpgvC2owtQ694iw6LnQwrgOOQD4FYalUTKJ2wVvMbvbX+hTrjWE76O8kfly4LH1h/lOteU9CUQ7Kp0lznnLquz272ZQaSf9liqz6KVhp5Z/wjeJBrdYaknIVI597HX4AgWOx8Aq4DXTBxps8vZShck/E1n5wVGa0nk7G/xubqIxoKZOHvUdcccCe1u9WB5C5Z7rGEAog2Qu8P2t5IksRvy/wgsYkeGuTe0iW3rfMrP6O19L/gaKj5hDxY+m0Fz5HjqR4VnsC22U5qwQmA+Hrcdg/z8lcTGsaIp/Y6KnsBXYi0BeFZwT7d/15dKeG41q6I/CnnRdJVxN0vlSIV53idQZ+j2YrhZbKNsVEeGY7kUvAMybnYh/4pZwnsHjJFbtrmefp6Pe+UEwOW5MBBWpvQk93bxYAc+xUDCcGbmYP8EYGL/ovIsvHJUzv+HXZZnM+hpZCt1dFA3EzLFaI2gxK3HFgOsEts= doh\een0303@DOHLT-120QFG3"
+      ];
     };
   };
 }
