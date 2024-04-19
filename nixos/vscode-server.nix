@@ -3,8 +3,8 @@
     flake.inputs.nix-ld.nixosModules.nix-ld
   ];
 
-  # programs.nix-ld.enable = true;
-  programs.nix-ld.dev.enable = true;
+  programs.nix-ld.enable = true;
+  # programs.nix-ld.dev.enable = true;
 
   services.openssh = {
     enable = true;

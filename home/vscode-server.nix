@@ -1,3 +1,4 @@
+# this does not appears to work, while ../nixos/vscode-server.nix does
 { pkgs, flake, ... }:
 {
   imports = [
