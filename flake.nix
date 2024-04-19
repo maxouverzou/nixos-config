@@ -25,6 +25,9 @@
     nixd.url = "github:nix-community/nixd";
     nixci.url = "github:srid/nixci";
 
+    nix-ld.url = "github:Mic92/nix-ld";
+    nix-ld.inputs.nixpkgs.follows = "nixpkgs";
+
     # Emacs
     emacs-overlay.url = "github:nix-community/emacs-overlay";
     nix-doom-emacs.url = "github:nix-community/nix-doom-emacs";

@@ -14,6 +14,7 @@ in
 
       ../../nixos/plex.nix
       ../../nixos/nas/gertry-config.nix
+      ../../nixos/vscode-server.nix
 
       ./bin-pool.nix
       ./containers/home-assistant.nix
