@@ -39,6 +39,7 @@
         ./firefox.nix
         ./office-productivity.nix
         ./vscode.nix
+        ./ssh-with-1password.nix
       ];
 
       maxou-linux.imports = [
