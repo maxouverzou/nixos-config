@@ -24,7 +24,8 @@ let
     libnotify
     imagemagick
   ];
-in stdenv.mkDerivation {
+in
+stdenv.mkDerivation {
   pname = "hyprshot";
   version = "unstable-2023-09-12";
 

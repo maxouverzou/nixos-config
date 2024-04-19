@@ -1,4 +1,4 @@
-{  
+{
   virtualisation.oci-containers = {
     backend = "podman";
     containers.homeassistant = {
@@ -12,7 +12,7 @@
       image = "ghcr.io/home-assistant/home-assistant:stable";
       extraOptions = [
         "--pull=newer"
-        "--network=host" 
+        "--network=host"
         # "--device=/dev/ttyACM0:/dev/ttyACM0"
       ];
     };

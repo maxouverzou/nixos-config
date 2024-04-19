@@ -1,4 +1,4 @@
-{  
+{
   virtualisation.oci-containers = {
     backend = "podman";
     containers.homebridge = {
@@ -8,7 +8,7 @@
       image = "docker.io/homebridge/homebridge:latest";
       extraOptions = [
         "--pull=newer"
-        "--network=host" 
+        "--network=host"
       ];
     };
   };

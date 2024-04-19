@@ -4,7 +4,8 @@
 { fetchurl
 , pkg-config
 , systemd
-, ... }:
+, ...
+}:
 self: super: {
   "sdbus" = super.buildPythonPackage rec {
     pname = "sdbus";
@@ -16,9 +17,9 @@ self: super: {
     format = "setuptools";
     doCheck = false;
     buildInputs = [ systemd ];
-    checkInputs = [];
+    checkInputs = [ ];
     nativeBuildInputs = [ pkg-config ];
-    propagatedBuildInputs = [];
+    propagatedBuildInputs = [ ];
   };
   "sdbus-networkmanager" = super.buildPythonPackage rec {
     pname = "sdbus-networkmanager";
@@ -29,9 +30,9 @@ self: super: {
     };
     format = "wheel";
     doCheck = false;
-    buildInputs = [];
-    checkInputs = [];
-    nativeBuildInputs = [];
+    buildInputs = [ ];
+    checkInputs = [ ];
+    nativeBuildInputs = [ ];
     propagatedBuildInputs = [
       self."sdbus"
     ];
@@ -45,9 +46,9 @@ self: super: {
     };
     format = "wheel";
     doCheck = false;
-    buildInputs = [];
-    checkInputs = [];
-    nativeBuildInputs = [];
+    buildInputs = [ ];
+    checkInputs = [ ];
+    nativeBuildInputs = [ ];
     propagatedBuildInputs = [
       self."sdbus"
     ];

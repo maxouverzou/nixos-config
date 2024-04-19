@@ -1,6 +1,12 @@
-{ config, pkgs, inputs, ... }: let
-  nixos-hardware = inputs.nixos-hardware.nixosModules;
-in {
+{ config
+, pkgs
+, flake
+, ...
+}:
+let
+  nixos-hardware = flake.inputs.nixos-hardware.nixosModules;
+in
+{
   imports =
     [
       nixos-hardware.common-cpu-intel
@@ -20,20 +26,18 @@ in {
   swapDevices = [
     {
       device = "/swapfile";
-      size = 8*1024;
+      size = 8 * 1024;
     }
   ];
 
   boot.resumeDevice = "/dev/disk/by-label/nixos"; # swapfile is on this drive
-
   # $ sudo filefrag -v /swapfile | awk '$1=="0:" {print substr($4, 1, length($4)-2)}'
   # 7456768
   boot.kernelParams = [ "resume_offset=7456768" ]; # for hibernation support
 
+  # TODO nixos-hardware already includes this?
   hardware.cpu.intel.updateMicrocode = true;
   hardware.bluetooth.enable = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "20.09";
 }

@@ -2,7 +2,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "usbhid" ];
@@ -14,7 +15,7 @@
     # force to remove mentions of ttyS0 & ttyAMA0 in https://github.com/NixOS/nixpkgs/blob/master/nixos/modules/installer/sd-card/sd-image-aarch64.nix#L19
     "console=tty0"
     "console=ttyS1,115200"
-    
+
     "nohibernate"
     "loglevel=7"
     "rootwait"
