@@ -66,8 +66,9 @@ rec {
         engines = {
           "HomeManager Options" = {
             urls = [{
-              template = "https://mipmip.github.io/home-manager-option-search/";
+              template = "https://home-manager-options.extranix.com/";
               params = [
+                { name = "release"; value = "master"; }
                 { name = "query"; value = "{searchTerms}"; }
               ];
 
