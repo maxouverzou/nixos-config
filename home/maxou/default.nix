@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [
     ../syncthing.nix
-    ./secrets.nix
+    # ./secrets.nix
     ../emacs.nix
     ../nushell.nix
   ];
