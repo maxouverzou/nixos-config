@@ -15,8 +15,6 @@
 
   systemd.automounts = [{
     after = [ "network.target" ];
-    before = container-services;
-    wantedBy = container-services;
     automountConfig = {
       TimeoutIdleSec = "600";
     };
