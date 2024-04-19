@@ -15,8 +15,8 @@
       };
       hostname = {
         ssh_only = true;
-        ssh_symbol = "🌐 ";
-        format = "on [$hostname](bold red) ";
+        # ssh_symbol = "🌐 ";
+        # format = "on [$hostname](bold red) ";
         trim_at = ".local";
         disabled = false;
       };
