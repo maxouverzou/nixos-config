@@ -16,6 +16,7 @@
 
     encfs
     sshfs
+    nix4vscode
   ];
 
   home.file.".jq".source = ./home.jq;

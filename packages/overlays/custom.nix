@@ -19,6 +19,7 @@ in
   hyprshot = super.callPackage ../custom/hyprshot.nix { };
   icloud-drive-fuse = super.callPackage ../custom/icloud-drive-fuse.nix { };
   jnv = super.callPackage ../custom/jnv.nix { };
+  nix4vscode = super.callPackage ../custom/nix4vscode.nix { };
   redis-cli = super.callPackage ../custom/redis-cli.nix { };
   rsync-backup-to-nas = super.callPackage ../custom/rsync-backup-to-nas.nix { };
   tails = super.callPackage ../custom/tails.nix { };
