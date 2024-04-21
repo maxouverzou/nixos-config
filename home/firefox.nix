@@ -82,8 +82,9 @@ rec {
             urls = [{
               template = "https://search.nixos.org/options";
               params = [
-                { name = "type"; value = "packages"; }
+                { name = "channel"; value = "unstable"; }
                 { name = "query"; value = "{searchTerms}"; }
+                { name = "type"; value = "packages"; }
               ];
             }];
 
@@ -95,8 +96,9 @@ rec {
             urls = [{
               template = "https://search.nixos.org/packages";
               params = [
-                { name = "type"; value = "packages"; }
+                { name = "channel"; value = "unstable"; }
                 { name = "query"; value = "{searchTerms}"; }
+                { name = "type"; value = "packages"; }
               ];
             }];
 
