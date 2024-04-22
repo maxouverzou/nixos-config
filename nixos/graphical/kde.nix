@@ -33,10 +33,10 @@
       plasma-browser-integration
       plasma-thunderbolt
       yakuake
-      ktorrent
     ]) ++ (with pkgs; [
       gnome-firmware # TODO find kde alternative (that is not discover)
       partition-manager
+      qbittorrent
       syncthingtray
       yubikey-manager-qt
     ]) ++ (lib.optional config.virtualisation.libvirtd.enable pkgs.virt-manager);
