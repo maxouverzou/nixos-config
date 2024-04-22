@@ -1,22 +1,12 @@
-{ pkgs, modulesPath, ... }:
-let
-  container-services = [
-    "podman-homebridge.service"
-    "podman-homeassistant.service"
-    "podman-pihole.service"
-  ];
-in
-{
+{ pkgs, modulesPath, ... }: {
   imports =
     [
       (modulesPath + "/profiles/headless.nix")
       # (modulesPath + "/profiles/minimal.nix") # TODO pulls gtk3/xorg
 
       ../../nixos/plex.nix
-      ../../nixos/nas/gertry-config.nix
       ../../nixos/vscode-server.nix
 
-      ./bin-pool.nix
       ./containers/home-assistant.nix
       ./services/tailscale.nix
     ];

@@ -1,7 +1,6 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     nfs-utils
-    encfs
   ];
 
   services.rpcbind.enable = true;

@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
 {
+  # TODO mount here, in read-only
   imports = [
     ./nas/public.nix
   ];
@@ -8,6 +9,8 @@
     enable = true;
     openFirewall = true;
   };
+
+  systemd.services.podman-homeassistant.wants = [ "mnt-nas_public.automount" ];
 
   powerManagement.enable = false;
 

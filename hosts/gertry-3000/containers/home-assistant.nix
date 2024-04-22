@@ -1,4 +1,8 @@
 {
+  imports = [
+    ../../../nixos/nas/gertry-config.nix
+  ];
+
   virtualisation.oci-containers = {
     backend = "podman";
     containers.homeassistant = {
@@ -18,6 +22,7 @@
     };
   };
   systemd.services.podman-homeassistant.after = [ "systemd-timesyncd.service" ];
+  systemd.services.podman-homeassistant.wants = [ "mnt-config.automount" ];
 }
 
 /**

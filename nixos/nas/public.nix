@@ -20,7 +20,7 @@
   }];
 
   systemd.automounts = [{
-    wantedBy = [ "multi-user.target" "plex.service" ];
+    after = [ "network.target" ];
     automountConfig = {
       TimeoutIdleSec = "600";
     };
