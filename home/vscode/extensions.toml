@@ -17,6 +17,10 @@ publisher_name = "ms-python"
 extension_name = "vscode-pylance"
 
 [[extensions]]
+publisher_name = "ms-python"
+extension_name = "black-formatter"
+
+[[extensions]]
 publisher_name = "dbaeumer"
 extension_name = "vscode-eslint"
 
@@ -104,3 +108,7 @@ extension_name = "theme-dracula"
 #[[extensions]]
 #publisher_name = "eamodio"
 #extension_name = "gitlens"
+
+[[extensions]]
+publisher_name = "Lencerf"
+extension_name = "beancount"

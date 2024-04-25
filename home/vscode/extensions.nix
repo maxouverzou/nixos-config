@@ -19,8 +19,8 @@ merge
         "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-pylance";
           publisher = "ms-python";
-          version = "2024.4.102";
-          sha256 = "0yfcb7cq03cxjz85kys35y16j9x52xrf652c08dfld6z9crv26c0";
+          version = "2024.4.104";
+          sha256 = "1sym2v479sz2cj58qlza0pfkylnklvfazcx9kcpwlkgpjwq0vwky";
         };
         "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
           name = "prettier-vscode";
@@ -63,6 +63,12 @@ merge
           publisher = "james-yu";
           version = "9.20.0";
           sha256 = "140pyh5alx8nawnqg4bsj2x8hmffywn5v08zq09mm0asbds3ghf5";
+        };
+        "ms-python"."black-formatter" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "black-formatter";
+          publisher = "ms-python";
+          version = "2024.2.0";
+          sha256 = "14w1ix8pm924piyw0dx2rq27cm5kmps9q99mkwrhi3ypliibx0x8";
         };
         "github"."vscode-github-actions" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-github-actions";
@@ -129,6 +135,12 @@ merge
           publisher = "jq-syntax-highlighting";
           version = "0.0.2";
           sha256 = "0q91mr6a6935wnka5iga97lv78g19dlj2rz6qg3ki6w3kdlvw2h7";
+        };
+        "lencerf"."beancount" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "beancount";
+          publisher = "lencerf";
+          version = "0.10.0";
+          sha256 = "19nvjb2gff487al7vlhz0fgy8dwihqn00ragx6sqfzias2prihf6";
         };
         "gleam"."gleam" = vscode-utils.extensionFromVscodeMarketplace {
           name = "gleam";
