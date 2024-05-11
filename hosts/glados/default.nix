@@ -14,6 +14,9 @@
       # ../../components/syncthing.system.nix
     ];
 
+  services.openiscsi.enable = true;
+  services.openiscsi.name = "iqn.2024-05.com.maxouverzou:glados";
+
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
