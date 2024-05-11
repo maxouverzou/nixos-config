@@ -19,8 +19,8 @@ merge
         "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-pylance";
           publisher = "ms-python";
-          version = "2024.4.104";
-          sha256 = "1sym2v479sz2cj58qlza0pfkylnklvfazcx9kcpwlkgpjwq0vwky";
+          version = "2024.5.100";
+          sha256 = "05lccr0mmccvf0mk0q36rxyd9znp29p6brgcnnz648zygi3l1bm8";
         };
         "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
           name = "prettier-vscode";
@@ -52,6 +52,12 @@ merge
           version = "1.0.5918";
           sha256 = "1m4mpy6irj3vzjw6mzmjjp6appgf000zfhmkjwxw65sl4wmjckaf";
         };
+        "yzhang"."markdown-all-in-one" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "markdown-all-in-one";
+          publisher = "yzhang";
+          version = "3.6.2";
+          sha256 = "1n9d3qh7vypcsfygfr5rif9krhykbmbcgf41mcjwgjrf899f11h4";
+        };
         "dracula-theme"."theme-dracula" = vscode-utils.extensionFromVscodeMarketplace {
           name = "theme-dracula";
           publisher = "dracula-theme";
@@ -61,8 +67,8 @@ merge
         "james-yu"."latex-workshop" = vscode-utils.extensionFromVscodeMarketplace {
           name = "latex-workshop";
           publisher = "james-yu";
-          version = "9.20.0";
-          sha256 = "140pyh5alx8nawnqg4bsj2x8hmffywn5v08zq09mm0asbds3ghf5";
+          version = "9.20.1";
+          sha256 = "084m2wh8qf871bskjnbkinqpx2nj5r74g5rnwibvc7qzgr1r8fx5";
         };
         "ms-python"."black-formatter" = vscode-utils.extensionFromVscodeMarketplace {
           name = "black-formatter";
@@ -85,14 +91,14 @@ merge
         "denoland"."vscode-deno" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-deno";
           publisher = "denoland";
-          version = "3.37.0";
-          sha256 = "0vbwcihw27vnlkfkrchqy1m9i1ivd4iv2rzb6kj0bq7kg0y2lh5h";
+          version = "3.37.1";
+          sha256 = "1xvk1pdsfmryypfmq8x03pwdm5fgwcqa8ziqvm53zbalq1rcx6hl";
         };
         "jakebecker"."elixir-ls" = vscode-utils.extensionFromVscodeMarketplace {
           name = "elixir-ls";
           publisher = "jakebecker";
-          version = "0.20.0";
-          sha256 = "1qap15kxcqmmp0qb8mq5k1s15gvmcsa26c8krhgg20zk3h2hvrm7";
+          version = "0.21.1";
+          sha256 = "1calkmix6hiaf31a0fblynykjwwnyn5bazcy8qd4g874g35a3wfg";
         };
         "coolbear"."systemd-unit-file" = vscode-utils.extensionFromVscodeMarketplace {
           name = "systemd-unit-file";
@@ -100,11 +106,23 @@ merge
           version = "1.0.6";
           sha256 = "0sc0zsdnxi4wfdlmaqwb6k2qc21dgwx6ipvri36x7agk7m8m4736";
         };
+        "foam"."foam-vscode" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "foam-vscode";
+          publisher = "foam";
+          version = "0.25.11";
+          sha256 = "0g119534d712ddyfpbrz99da3hy218b0fa28l0qn713rpa3736ms";
+        };
         "sanaajani"."taskrunnercode" = vscode-utils.extensionFromVscodeMarketplace {
           name = "taskrunnercode";
           publisher = "sanaajani";
           version = "0.3.0";
           sha256 = "1sx50iawvkd93fv8m1vx28z4kr8sbk4rjkb8156qd6d0vcrqql9m";
+        };
+        "philipbe"."theme-gray-matter" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "theme-gray-matter";
+          publisher = "philipbe";
+          version = "1.7.0";
+          sha256 = "0m6d36j1q0qlq1wxfgjrlb86cmx1m213zkrzq3znj0g46d7vwwhd";
         };
         "jnoortheen"."nix-ide" = vscode-utils.extensionFromVscodeMarketplace {
           name = "nix-ide";
@@ -139,14 +157,14 @@ merge
         "lencerf"."beancount" = vscode-utils.extensionFromVscodeMarketplace {
           name = "beancount";
           publisher = "lencerf";
-          version = "0.10.0";
-          sha256 = "19nvjb2gff487al7vlhz0fgy8dwihqn00ragx6sqfzias2prihf6";
+          version = "0.11.0";
+          sha256 = "1qb2ffmnlscailhicip5gq6ap8saa9hr3mfc3s4vcg9knv2bw81n";
         };
         "gleam"."gleam" = vscode-utils.extensionFromVscodeMarketplace {
           name = "gleam";
           publisher = "gleam";
-          version = "2.7.0";
-          sha256 = "1zqysqc7dlbax21kydyhiq5zyfl292zx3457x1cy75q8zjzpmwmr";
+          version = "2.9.0";
+          sha256 = "0n6a03a0rq2j9y3r73i71s0nawk9j43m6zv57aibsvm0vqbh6yyn";
         };
         "w4rh4wk"."souffle-syntax" = vscode-utils.extensionFromVscodeMarketplace {
           name = "souffle-syntax";

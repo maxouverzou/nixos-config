@@ -112,3 +112,19 @@ extension_name = "theme-dracula"
 [[extensions]]
 publisher_name = "Lencerf"
 extension_name = "beancount"
+
+
+# Foam Extensions
+# already included: "esbenp.prettier-vscode"
+
+[[extensions]]
+publisher_name = "foam"
+extension_name = "foam-vscode"
+
+[[extensions]]
+publisher_name = "yzhang"
+extension_name = "markdown-all-in-one"
+
+[[extensions]]
+publisher_name = "philipbe"
+extension_name = "theme-gray-matter"
