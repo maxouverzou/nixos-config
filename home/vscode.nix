@@ -82,6 +82,9 @@ in
       ];
       # extension setting
       "gitlens.plusFeatures.enabled" = false;
+      "projectManager.git.baseFolders" = [
+        "~/Development"
+      ];
     };
 
   };
