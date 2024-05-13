@@ -105,9 +105,9 @@ extension_name = "latex-workshop"
 publisher_name = "dracula-theme"
 extension_name = "theme-dracula"
 
-#[[extensions]]
-#publisher_name = "eamodio"
-#extension_name = "gitlens"
+[[extensions]]
+publisher_name = "eamodio"
+extension_name = "gitlens"
 
 [[extensions]]
 publisher_name = "Lencerf"

@@ -34,6 +34,12 @@ merge
           version = "3.0.5";
           sha256 = "1cmkgi1i5c7qkrr8cif36i803yl6mrv87y9gmzfb701pcfg8yxx9";
         };
+        "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "gitlens";
+          publisher = "eamodio";
+          version = "2024.5.1305";
+          sha256 = "0rz9llzqdlqdbhfizisl844qxlrif7vj0d25cd9p44cw3c5ww2sw";
+        };
         "ms-python"."isort" = vscode-utils.extensionFromVscodeMarketplace {
           name = "isort";
           publisher = "ms-python";
