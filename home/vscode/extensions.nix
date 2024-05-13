@@ -64,6 +64,18 @@ merge
           version = "2.24.3";
           sha256 = "1gg9wrjz6w2khr1h449fwap34w1ydkndyi97r5bpbbdw9fa7q7fw";
         };
+        "alefragnani"."project-manager" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "project-manager";
+          publisher = "alefragnani";
+          version = "12.8.0";
+          sha256 = "1gp2dd4xm5a4dmaikcng79mfcb8a24mddsdwpgg4bqshcz4q7n5h";
+        };
+        "gruntfuggly"."todo-tree" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "todo-tree";
+          publisher = "gruntfuggly";
+          version = "0.0.226";
+          sha256 = "0yrc9qbdk7zznd823bqs1g6n2i5xrda0f9a7349kknj9wp1mqgqn";
+        };
         "james-yu"."latex-workshop" = vscode-utils.extensionFromVscodeMarketplace {
           name = "latex-workshop";
           publisher = "james-yu";
@@ -82,11 +94,23 @@ merge
           version = "0.26.2";
           sha256 = "16kp1yxs798jp8ffqq3ixm3pyz4f3wgdkdyjpjy94ppqp4aklixh";
         };
+        "bierner"."markdown-mermaid" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "markdown-mermaid";
+          publisher = "bierner";
+          version = "1.23.0";
+          sha256 = "0azf61v4gm4izb4s83bjxnfnnglnql6w5mxjf8pkq38wr56k31sc";
+        };
         "tamasfe"."even-better-toml" = vscode-utils.extensionFromVscodeMarketplace {
           name = "even-better-toml";
           publisher = "tamasfe";
           version = "0.19.2";
           sha256 = "0q9z98i446cc8bw1h1mvrddn3dnpnm2gwmzwv2s3fxdni2ggma14";
+        };
+        "bierner"."markdown-emoji" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "markdown-emoji";
+          publisher = "bierner";
+          version = "0.3.0";
+          sha256 = "0llmgk3rwcslqfnqp7xgvrqjqly3hvisahzmi0p49wn0w0fky3xg";
         };
         "denoland"."vscode-deno" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-deno";
@@ -94,11 +118,29 @@ merge
           version = "3.37.1";
           sha256 = "1xvk1pdsfmryypfmq8x03pwdm5fgwcqa8ziqvm53zbalq1rcx6hl";
         };
+        "bierner"."emojisense" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "emojisense";
+          publisher = "bierner";
+          version = "0.10.0";
+          sha256 = "14rb8licb32rh04g7lq73lmfx4pk2p4x63427l3s9fw9idsiwgrw";
+        };
         "jakebecker"."elixir-ls" = vscode-utils.extensionFromVscodeMarketplace {
           name = "elixir-ls";
           publisher = "jakebecker";
           version = "0.21.1";
           sha256 = "1calkmix6hiaf31a0fblynykjwwnyn5bazcy8qd4g874g35a3wfg";
+        };
+        "bierner"."markdown-footnotes" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "markdown-footnotes";
+          publisher = "bierner";
+          version = "0.1.1";
+          sha256 = "1pp64x8cn4vmpscmzv2dg6bakjhnwd36rms2wl6bs5laq29k5wl7";
+        };
+        "bpruitt-goddard"."mermaid-markdown-syntax-highlighting" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "mermaid-markdown-syntax-highlighting";
+          publisher = "bpruitt-goddard";
+          version = "1.6.3";
+          sha256 = "1pa5d5fvi8dgf025lfkicfza8bvnbpripc1rfncnd2fajxbbpdl6";
         };
         "coolbear"."systemd-unit-file" = vscode-utils.extensionFromVscodeMarketplace {
           name = "systemd-unit-file";
@@ -111,6 +153,12 @@ merge
           publisher = "foam";
           version = "0.25.11";
           sha256 = "0g119534d712ddyfpbrz99da3hy218b0fa28l0qn713rpa3736ms";
+        };
+        "jebbs"."markdown-extended" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "markdown-extended";
+          publisher = "jebbs";
+          version = "1.1.4";
+          sha256 = "0bkncpkc04n96r8wfm34fhasyp51li4bv6x02bd0d5prb116prn5";
         };
         "sanaajani"."taskrunnercode" = vscode-utils.extensionFromVscodeMarketplace {
           name = "taskrunnercode";

@@ -116,6 +116,8 @@ extension_name = "beancount"
 
 # Foam Extensions
 # already included: "esbenp.prettier-vscode"
+# duplicate functionality: "tomoki1207.pdf"
+# ignored: "vsls-contrib.gitdoc" "pomdtr.excalidraw-editor"
 
 [[extensions]]
 publisher_name = "foam"
@@ -128,3 +130,35 @@ extension_name = "markdown-all-in-one"
 [[extensions]]
 publisher_name = "philipbe"
 extension_name = "theme-gray-matter"
+
+[[extensions]]
+publisher_name = "bierner"
+extension_name = "emojisense"
+
+[[extensions]]
+publisher_name = "bierner"
+extension_name = "markdown-emoji"
+
+[[extensions]]
+publisher_name = "bierner"
+extension_name = "markdown-footnotes"
+
+[[extensions]]
+publisher_name = "bierner"
+extension_name = "markdown-mermaid"
+
+[[extensions]]
+publisher_name = "bpruitt-goddard"
+extension_name = "mermaid-markdown-syntax-highlighting"
+
+[[extensions]]
+publisher_name = "alefragnani"
+extension_name = "project-manager"
+
+[[extensions]]
+publisher_name = "jebbs"
+extension_name = "markdown-extended"
+
+[[extensions]]
+publisher_name = "Gruntfuggly"
+extension_name = "todo-tree"
