@@ -85,6 +85,7 @@ in
       "projectManager.git.baseFolders" = [
         "~/Development"
       ];
+      "markdownExtended.disabledPlugins" = "kbd";
     };
 
   };
