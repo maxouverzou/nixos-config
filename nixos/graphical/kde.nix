@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm = {
+  services.displayManager.sddm = {
     enable = lib.mkDefault true;
     wayland.enable = lib.mkDefault true;
     settings = lib.mkIf (builtins.length config.activeUsers == 1) {
@@ -12,7 +12,7 @@
     };
   };
   services.desktopManager.plasma6.enable = true;
-  services.xserver.displayManager.defaultSession = "plasma";
+  services.displayManager.defaultSession = "plasma";
 
   security.pam.services.kwallet = {
     name = "kwallet";
