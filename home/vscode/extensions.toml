@@ -5,6 +5,10 @@ publisher_name = "ms-vscode-remote"
 extension_name = "remote-ssh"
 
 [[extensions]]
+publisher_name = "ms-vscode-remote"
+extension_name = "remote-containers"
+
+[[extensions]]
 publisher_name = "ms-python"
 extension_name = "python"
 

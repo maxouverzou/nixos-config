@@ -19,8 +19,8 @@ merge
         "ms-python"."vscode-pylance" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-pylance";
           publisher = "ms-python";
-          version = "2024.5.100";
-          sha256 = "05lccr0mmccvf0mk0q36rxyd9znp29p6brgcnnz648zygi3l1bm8";
+          version = "2024.5.101";
+          sha256 = "0yp0dlq2q9yvv5vhpxfmpbrdgcy61i9r1ilknhni29nlg86mqbbv";
         };
         "esbenp"."prettier-vscode" = vscode-utils.extensionFromVscodeMarketplace {
           name = "prettier-vscode";
@@ -37,14 +37,20 @@ merge
         "eamodio"."gitlens" = vscode-utils.extensionFromVscodeMarketplace {
           name = "gitlens";
           publisher = "eamodio";
-          version = "2024.5.1305";
-          sha256 = "0rz9llzqdlqdbhfizisl844qxlrif7vj0d25cd9p44cw3c5ww2sw";
+          version = "2024.5.2005";
+          sha256 = "1ajdwbnzb3l8m9la5z9pyl60vmhyjl01fb36kr7m1fw4py2sm0df";
+        };
+        "ms-vscode-remote"."remote-containers" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "remote-containers";
+          publisher = "ms-vscode-remote";
+          version = "0.366.0";
+          sha256 = "0mk4fc0vr4igl1lbvdrqgfs6qfbkyqkki2rbix8vmqq97jp3zmqj";
         };
         "ms-python"."isort" = vscode-utils.extensionFromVscodeMarketplace {
           name = "isort";
           publisher = "ms-python";
-          version = "2023.13.10681007";
-          sha256 = "134cljivnpba8h27xwa6dww1majp5jrgljyij1jng32rmi7ylzlp";
+          version = "2023.13.11371020";
+          sha256 = "1fps9gzizhba33x6kr2hhym6zlm5m2lsgq9gqq41i29rcjyvpk18";
         };
         "ms-vscode-remote"."remote-ssh" = vscode-utils.extensionFromVscodeMarketplace {
           name = "remote-ssh";
@@ -91,8 +97,8 @@ merge
         "ms-python"."black-formatter" = vscode-utils.extensionFromVscodeMarketplace {
           name = "black-formatter";
           publisher = "ms-python";
-          version = "2024.2.0";
-          sha256 = "14w1ix8pm924piyw0dx2rq27cm5kmps9q99mkwrhi3ypliibx0x8";
+          version = "2024.3.11371020";
+          sha256 = "1a12ssqa75vx79qiv10k3mw7al73yi4rlr31a1hbqc8xp0y23113";
         };
         "github"."vscode-github-actions" = vscode-utils.extensionFromVscodeMarketplace {
           name = "vscode-github-actions";
@@ -145,8 +151,8 @@ merge
         "bpruitt-goddard"."mermaid-markdown-syntax-highlighting" = vscode-utils.extensionFromVscodeMarketplace {
           name = "mermaid-markdown-syntax-highlighting";
           publisher = "bpruitt-goddard";
-          version = "1.6.3";
-          sha256 = "1pa5d5fvi8dgf025lfkicfza8bvnbpripc1rfncnd2fajxbbpdl6";
+          version = "1.6.4";
+          sha256 = "1fc18r99dk0ywfv15xnsjhikld9sgbv8m8pgbir6y6x8g4ilqb6f";
         };
         "coolbear"."systemd-unit-file" = vscode-utils.extensionFromVscodeMarketplace {
           name = "systemd-unit-file";
@@ -172,17 +178,17 @@ merge
           version = "0.3.0";
           sha256 = "1sx50iawvkd93fv8m1vx28z4kr8sbk4rjkb8156qd6d0vcrqql9m";
         };
-        "philipbe"."theme-gray-matter" = vscode-utils.extensionFromVscodeMarketplace {
-          name = "theme-gray-matter";
-          publisher = "philipbe";
-          version = "1.7.0";
-          sha256 = "0m6d36j1q0qlq1wxfgjrlb86cmx1m213zkrzq3znj0g46d7vwwhd";
-        };
         "jnoortheen"."nix-ide" = vscode-utils.extensionFromVscodeMarketplace {
           name = "nix-ide";
           publisher = "jnoortheen";
           version = "0.3.1";
           sha256 = "1cpfckh6zg8byi6x1llkdls24w9b0fvxx4qybi9zfcy5gc60r6nk";
+        };
+        "philipbe"."theme-gray-matter" = vscode-utils.extensionFromVscodeMarketplace {
+          name = "theme-gray-matter";
+          publisher = "philipbe";
+          version = "1.7.0";
+          sha256 = "0m6d36j1q0qlq1wxfgjrlb86cmx1m213zkrzq3znj0g46d7vwwhd";
         };
         "vscode-org-mode"."org-mode" = vscode-utils.extensionFromVscodeMarketplace {
           name = "org-mode";
