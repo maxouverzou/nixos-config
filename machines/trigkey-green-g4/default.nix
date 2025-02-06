@@ -22,7 +22,7 @@ in
   fileSystems."/".options = [ "noatime" "discard" ];
   fileSystems."/boot".options = [ "noatime" "discard" ];
 
-  networking.wireless.enable = true;
+  networking.wireless.enable = false; # TODO: reenable this later
 
   hardware.cpu.intel.updateMicrocode = true;
   hardware.bluetooth.enable = true;
