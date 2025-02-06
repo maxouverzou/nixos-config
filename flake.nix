@@ -68,8 +68,6 @@
             ];
 
             activeUsers = [ "maxou" "milou" ];
-            # sops.defaultSopsFile = ./secrets.json;
-            # sops.defaultSopsFormat = "json";
           };
 
           gertry = self.nixos-flake.lib.mkLinuxSystem {
@@ -80,8 +78,13 @@
               ./hosts/gertry-3000
             ];
             activeUsers = [ "maxou" "milou" ];
-            # sops.defaultSopsFile = ./secrets.json;
-            # sops.defaultSopsFormat = "json";
+            sops = {
+              defaultSopsFile = ./secrets/main.yaml;
+              defaultSopsFormat = "yaml";
+              secrets = {
+                ANTHROPIC_API_KEY = { };
+              };
+            };
           };
 
           glados = self.nixos-flake.lib.mkLinuxSystem {
