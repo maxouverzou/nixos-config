@@ -9,6 +9,8 @@
 
       ./containers/home-assistant.nix
       ./services/tailscale.nix
+      ./services/open-webui.nix
+      ./services/paperless.nix
     ];
 
   networking = {
