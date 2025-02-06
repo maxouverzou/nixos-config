@@ -12,7 +12,7 @@
     pkgs.xdg-desktop-portal-hyprland
   ];
 
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   programs.dconf.enable = true; # to configure gtk theme
 
