@@ -2,7 +2,6 @@
   imports = [
     ../syncthing.nix
     # ./secrets.nix
-    ../emacs.nix
     ../nushell.nix
   ];
 
@@ -13,10 +12,6 @@
     # gleam
     helix
     rsync-backup-to-nas
-
-    encfs
-    sshfs
-    nix4vscode
   ];
 
   home.file.".jq".source = ./home.jq;
