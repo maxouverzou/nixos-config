@@ -14,7 +14,7 @@ in
 rec {
   users.users = addExtraGroupsToUsers (defaultGroups
     ++ (optionals config.services.xserver.enable [ "video" "input" ])
-    ++ (optional (config.services.pipewire.enable || config.hardware.pulseaudio.enable) "audio")
+    ++ (optional (config.services.pipewire.enable || config.services.pulseaudio.enable) "audio")
     ++ (optional (config.hardware.hackrf.enable || config.hardware.rtl-sdr.enable) "plugdev")
     ++ (optional config.networking.networkmanager.enable "networkmanager")
     ++ (optional config.virtualisation.docker.enable "docker")
