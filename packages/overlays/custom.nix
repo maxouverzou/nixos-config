@@ -26,6 +26,7 @@ in
   tile-stitch = super.callPackage ../custom/tile-stitch.nix { };
   unbound-blocklist-stevenblack = super.callPackage ../custom/unbound-blocklist-stevenblack.nix { };
   walk = super.callPackage ../custom/walk.nix { };
+  litellm-config = super.callPackage ../custom/litellm-config.nix { };
 
   tex-mine = super.callPackage ../custom/tex-mine.nix { };
 }
