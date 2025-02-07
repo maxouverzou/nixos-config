@@ -74,5 +74,5 @@
           model: claude-3-haiku-20240307
           api_key: "os.environ/ANTHROPIC_API_KEY"
   '';
-  destination = "config.yaml";
+  destination = "/config.yaml";
 }

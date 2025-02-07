@@ -8,6 +8,7 @@
       ../../nixos/vscode-server.nix
 
       ./containers/home-assistant.nix
+      ./containers/litellm.nix
       ./services/tailscale.nix
       ./services/open-webui.nix
       ./services/paperless.nix
