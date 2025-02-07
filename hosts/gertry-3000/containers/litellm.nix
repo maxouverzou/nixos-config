@@ -17,7 +17,7 @@
       ports = [ "4000:4000/tcp" ];
       image = "ghcr.io/berriai/litellm:main-latest";
       environmentFiles = [ "${config.sops.templates."litellm.env".path}" ];
-      cmd = ["--config" "/app/config.yaml"];
+      cmd = [ "--config" "/app/config.yaml" ];
     };
   };
 
