@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ pkgs, config, ... }: {
   sops.secrets = {
     PAPERLESS_ADMIN_PASSWORD = {
       mode = "0400";
@@ -29,11 +29,11 @@
     };
   };
 
-  systemd."paperless-backup" = {
+  systemd.services."paperless-backup" = {
     serviceConfig = {
       WorkingDirectory = config.services.paperless.dataDir;
       ExecStart = "${pkgs.restic}/bin/restic backup . --skip-if-unchanged";
       EnvironmentFile = config.sops.templates."paperless-backup.env".path;
-    }
-      };
-  }
+    };
+  };
+}
