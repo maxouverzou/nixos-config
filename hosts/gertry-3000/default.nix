@@ -7,13 +7,13 @@
       ../../nixos/plex.nix
       ../../nixos/vscode-server.nix
 
-      ./containers/home-assistant.nix
       ./containers/litellm.nix
       ./services/tailscale.nix
       ./services/open-webui.nix
       ./services/paperless.nix
     ];
 
+  # https://myme.no/posts/2021-11-25-nixos-home-assistant.html
   networking = {
     hostName = "gertry";
     domain = "local";
@@ -27,7 +27,8 @@
       "2606:4700:4700::1001"
     ];
 
-    interfaces.enp1s0 = {
+    bridges.br0.interfaces = [ "enp1s0" ];
+    interfaces.br0 = {
       useDHCP = false;
       ipv4.addresses = [{
         address = "192.168.1.2";
@@ -47,4 +48,5 @@
     settings.PasswordAuthentication = true;
   };
 
+  virtualisation.libvirtd.enable = true;
 }
