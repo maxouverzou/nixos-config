@@ -21,5 +21,8 @@
     };
   };
 
-  systemd.services.litellm.before = [ "open-webui.service" ];
+  systemd.services.litellm = {
+    wantedBy = [ "open-webui.service" ];
+    before = [ "open-webui.service" ];
+  };
 }
