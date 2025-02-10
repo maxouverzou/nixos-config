@@ -10,7 +10,7 @@
     openFirewall = true;
   };
 
-  systemd.services.podman-homeassistant.wants = [ "mnt-nas_public.automount" ];
+  systemd.services.plex.wants = [ "mnt-nas_public.automount" ];
 
   powerManagement.enable = false;
 
